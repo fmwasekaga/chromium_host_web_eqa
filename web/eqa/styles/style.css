@@ -2981,6 +2981,11 @@ select {
   margin-left:-28px;  
 }
 
+.select-dropdown.fill .list {
+  width: calc(100%);
+  margin-left:0px;  
+}
+
 .lights-off .select-dropdown .list {
 	background-color: #182538;
 	color:#97a9c5; /*rgba(255, 255, 255, 0.3)*/

@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html > <!--manifest="manifest.appcache"-->
+<head>
+	<meta name="author" content="Fredrick Mwasekaga" />
+	<meta name="description" content="Kaga Connect is a software+services company" />
+	<meta name="keywords" content="kaga,connect" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="expires" content="Sun, 01 Jan 2014 00:00:00 GMT"/>
+	<meta http-equiv="pragma" content="no-cache" />
+
+	<!-- Required at the beginning-->
+	<script type="text/javascript" src="../../scripts/jquery-3.4.1.slim.min.js"></script>
+	<!--<script src="../../../include/scripts/jquery-3.2.1.min.js"></script>-->	
+	
+	<!-- Optional-->
+	<script type="text/javascript" src="../../scripts/Blob.js" ></script>
+	<script type="text/javascript" src="../../scripts/FileSaver.min.js"></script>
+	<script type="text/javascript" src="../../scripts/Stuk-jszip/dist/2.6.1/jszip.min.js" ></script>
+	<script type="text/javascript" src="../../scripts/js-xlsx/dist/xlsx.js" ></script>
+	<script type="text/javascript" src="../../scripts/jsPDF/dist/jspdf.debug.js" ></script>
+	<script type="text/javascript" src="../../../scripts/isotope/isotope.pkgd.min.js"  ></script>
+	<script type="text/javascript" src="../../../scripts/masonry/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="../../../scripts/handsontable/dist/handsontable.full.min.js"></script>	
+	<script type="text/javascript" src="../../../scripts/DialogEffects/classie.js"></script>
+	<script type="text/javascript" src="../../../scripts/DialogEffects/dialogFx.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../../../scripts/handsontable/dist/handsontable.css">
+	<link rel="stylesheet" type="text/css" href="../../../styles/materialdesignicons.min.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="../../../styles/DialogEffects/dialog.css"  />	
+	<link rel="stylesheet" type="text/css" href="../../../styles/DialogEffects/dialog-don.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/materialdesignicons.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../styles/tooltips.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/style.css"/>
+	
+	<!--
+	<script src="../../../include/thirdparty/air-datepicker/dist/js/datepicker.min.js"></script>
+	<script src="../../../include/thirdparty/air-datepicker/dist/js/i18n/datepicker.en.js"></script>
+	<script src="../../../include/thirdparty/echarts/dist/echarts.js"></script>
+	<link  href="../../../include/thirdparty/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">		
+	
+	<link  href="../../../include/styles/tpage.css"  rel="stylesheet" type="text/css" />	
+	<link  href="../../../include/styles/checkboxes.css" rel="stylesheet" type="text/css" />
+	<link  href="../../../include/styles/switches.css"  rel="stylesheet" type="text/css" />-->
+	
+	<!-- Required at the end-->
+	<!--<script src="../../../include/scripts/require.js"></script>-->
+
+	
+	<style>		
+		::-webkit-scrollbar              { background: transparent; width: 8px; height:8px; }
+		::-webkit-scrollbar-button       { /* 2 */ }
+		::-webkit-scrollbar-track        { /* 3 */ }
+		::-webkit-scrollbar-track-piece  { background: transparent; /* 4 */ }
+		::-webkit-scrollbar-thumb        { border: 1px solid transparent; background:#666; border-radius: 2px; }
+		::-webkit-scrollbar-thumb:hover  { background:#666; }
+		::-webkit-scrollbar-corner       { /* 6 */ }
+		::-webkit-resizer                { /* 7 */ }
+		
+		.darker::-webkit-scrollbar-thumb        { border: 1px solid transparent; background:#999; border-radius: 2px; }
+		
+	</style>
+	 
+	 
+	<title>Spreadsheet Viewer</title>		<!--max-width:595px; height: 842px; -->
+</head>
+<body data-transition="2" style="width:100%; height:100%;  position:relative;">
+	<div class="FlexDisplay FlexGrow FlexRow Animation-3ms scroll darker" style="width:100%; height:100%; padding:0px 0px;  background:#525659; position:relative; ">
+		<div class="FlexDisplay FlexGrow FlexRow" style="width:100%; height:50px; position:fixed; z-index:3;  background:#323639; -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.3);">
+			<div class="FlexDisplay  Flex FlexGrow" style="height:50px; overflow:hidden;">
+				<span id="SpreadsheetTitle" style="margin:18px 0px 0px 14px; font-size:14px; color:#fff; font-weight:bolder; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1; pointer-events: none;"></span>
+			</div>
+			<div class="FlexDisplay  Flex FlexGrow" style="height:50px;">
+				<div class="FlexDisplay" style="margin:18px auto; font-size:13px; color:#fff;">
+					<span id="SheetNumber">1</span><span id="SheetSeparator" style="margin:0px 6px;">/</span><span id="SheetTotal">1</span>
+				</div>
+			</div>
+			<div class="FlexDisplay  Flex FlexGrow FlexRow" style="height:50px;">
+				<div class="FlexDisplay FlexRow Flex" style="width:100%; height:100%;">
+				</div>
+				<div class="FlexDisplay" style="width:auto; min-height:48px; max-height:48px; margin:2px 8px;">
+					<div id="SpreadsheetRefresh" class="FlexDisplay NonStandard Button Directional"><i class="mdi mdi-refresh" style="font-size:20px; color:white; margin:12px 0px 0px 0px;"></i></div>
+				</div>
+				<div class="FlexDisplay" style="width:auto; min-height:48px; max-height:48px; margin:2px 8px;">
+					<div id="SpreadsheetDownload" class="FlexDisplay NonStandard Button Directional"><i class="mdi mdi-download" style="font-size:20px; color:white; margin:12px 0px 0px 0px;"></i></div>
+				</div>
+				<div class="FlexDisplay" style="width:auto; min-height:48px; max-height:48px; margin:2px 16px 2px 8px;">
+					<div id="SpreadsheetPrint" class="FlexDisplay NonStandard Button Directional"><i class="mdi mdi-printer" style="font-size:20px; color:white; margin:12px 0px 0px 0px;"></i></div>
+				</div>
+			</div>
+		</div>
+		<div class="Round" style="display:block; overflow:auto; max-width:842px; min-width:842px; margin:60px auto 20px auto; position:relative; background:#ffffff;  -webkit-box-shadow:0px 0px 8px rgba(0, 0, 0, 0.7);">
+			<div id="spreadsheet_parent" style="display:block; height:100%; position:absolute; z-index:2;">		
+			</div>
+			<!--<div style="display:block; width:100%; height:100%; position:absolute; z-index:1;  background:#ffffff;">
+				<div style="width:50px; height:100%; background:#eee; border-right: 1px solid #CCC;"></div>
+			</div>	-->		
+		</div>
+	</div>
+</body>
+</html>	
+<script>
+
+function s2ab(s) { 
+	var buf = new ArrayBuffer(s.length); //convert s to arrayBuffer
+	var view = new Uint8Array(buf);  //create uint8array as viewer
+	for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF; //convert to octet
+	return buf;    
+}
+
+function Populate(data, doc, title, showColumnHeader, showRowHeader){
+	$('#spreadsheet_parent').html('<div id="spreadsheet_viewer" style="display:block; width:100%; height:100%; "></div>');
+	var container = document.getElementById('spreadsheet_viewer');
+	
+	if(data.length > 0){
+		var clone = data.map(function(item) {return JSON.parse(JSON.stringify(item));});
+		var hot = new Handsontable(container, {
+			data: clone,
+			colHeaders: showColumnHeader,
+			rowHeaders: showRowHeader,
+			stretchH: 'all',
+			autoWrapRow: true,
+			fillHandle: true,
+			contextMenu: true,
+			mergeCells: true,
+			minSpareRows: 0,
+			minSpareCols: 0,
+			columnHeaderHeight: 32,
+			headerTooltips: {
+			  rows: false,
+			  columns: true,
+			  onlyTrimmed: true
+			}
+		});
+	}
+
+	$("#SpreadsheetTitle").html(title);
+	$("#SheetNumber").html(data.length > 1 ? data.length-1 : data.length);
+	$("#SheetSeparator").html("");
+	$("#SheetTotal").html("Items");
+
+	$("#SpreadsheetRefresh").unbind( "click" );
+	$("#SpreadsheetRefresh").click(function() {
+		Populate(data, doc, title);
+	});
+
+	$("#SpreadsheetDownload").unbind( "click" );
+	$("#SpreadsheetDownload").click(function() { 
+		doc = XLSX.utils.book_new();
+		doc.Props = {
+				Title: title,
+				Subject: "EQA",
+				Author: "Kaga Connect + GLASER",
+				CreatedDate: new Date()
+		};
+		doc.SheetNames.push("Sheet 1");
+		doc.Sheets["Sheet 1"] = XLSX.utils.aoa_to_sheet(data);		
+		saveAs(new Blob([s2ab(XLSX.write(doc, {bookType:'xlsx',  type: 'binary'}))],{type:"application/octet-stream"}), title.toUpperCase()+' Report.xlsx');
+	});
+
+	$("#SpreadsheetPrint").unbind( "click" );
+	$("#SpreadsheetPrint").click(function() { 
+		
+	});
+}
+
+</script>

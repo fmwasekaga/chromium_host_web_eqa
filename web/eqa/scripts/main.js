@@ -313,8 +313,8 @@ function isNumberKey(evt){
     return true;
 }
 
-function SelectItemByValue(item,value){
-	if(value != ""){
+function SelectItemByValue(item,value,strict=true){
+	if((strict == true && value != "") || strict == false){
 		item.find('.selected').removeClass('selected');
 		item.find("li[data-value="+value+"]").addClass('selected');
 		
@@ -325,8 +325,8 @@ function SelectItemByValue(item,value){
 	} 
 }
 
-function SelectItemByText(item,value){ 
-	if(value != ""){
+function SelectItemByText(item,value,strict=true){ 
+	if((strict == true && value != "") || strict == false){
 		item.find('.selected').removeClass('selected');
 		item.find("li[data-display-text="+value+"]").addClass('selected');
 		
@@ -547,9 +547,20 @@ function SqlLiteConnection(host, user, pass){
 }
 
 function isEmpty(value){
-	if(value == undefined || value == null) return true;
+	//if(value == undefined || value == null) return true;
 	
-	return value != undefined && value != null && value.trim().length == 0;
+	 return (
+		// null or undefined
+		(value == null) ||
+
+		// has length and it's zero
+		(value.hasOwnProperty('length') && value.length === 0) ||
+
+		// is an Object and has no keys
+		(value.constructor === Object && Object.keys(value).length === 0)
+	  );
+	
+	//return value != undefined && value != null && value.trim().length == 0;
 }
 
 function splitWords(words, sentence, sentences, len){

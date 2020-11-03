@@ -1,0 +1,165 @@
+<div class="FlexDisplay FlexColumn container"  style="margin:0px; padding:0px; height:100%;">
+	<div class="FlexDisplay" style="background:#535FD7; height:48px; box-shadow:0 1px 2px rgba(0, 0, 0, 0.3);" >
+		<div id="backBtn"  class="nav-button" >
+			<i class="mdi mdi-apps"></i>
+		</div>
+		<div class="FlexDisplay">
+			<span class="BEQAS-Title" style="white-space:nowrap; overflow:hidden; text-overflow: ellipsis; font-weight:normal; font-size:12px; color:#ffffff; margin:auto 8px;">Basic External Quality Assessment System</span>
+		</div>
+	</div>
+	<div class="FlexDisplay Flex ContentPage  inner-section FadeIn"  style="width:100%; height:1px;">		
+		<div class="FlexDisplay FlexColumn FlexGrow FlexBoxSizing-BorderBox" style="height:100%; overflow: hidden; position:relative;">
+			<div class="FlexDisplay" style="margin:16px 16px 0px 16px;">
+				<div class="page-container Flex FlexColumn inner-container-with-overflow Round Shadow" style="position:relative; height:100%;  width:100%;">
+					
+					<div class="FlexDisplay FlexRow Divider-Bottom" style="height:32px; " >
+						<div class="FlexDisplay Flex">
+							<h4 class="feature-title mt-0" style="margin:8px 0px 0px 12px; font-size: 12px; font-weight:normal; line-height:16px;">DETAILED REPORTS - FILTER</h4>
+						</div>	
+					</div>
+					<div class="FlexDisplay FlexRow">
+						<div class="FlexDisplay FlexRow"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+							<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+								<div class="icon">
+									<i class="mdi mdi-file-compare" />
+								</div>
+								<select class="reportFormType">
+									<option value="Detailed" selected="">Detailed</option>
+									<option value="Ranking">Ranking</option>
+									<option value="Historical">Historical</option>
+									<option value="Response">Response</option>
+								</select>
+							</div>
+						</div>
+						<div class="FlexDisplay FlexRow"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+							<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+								<div class="icon">
+									<i class="mdi mdi-format-list-checks" />
+								</div>
+								<select class="reportType">
+									<option value="title" selected="">Report Type...</option>
+									<option value="Pdf">Pdf</option>
+									<option value="Excel">Excel</option>
+								</select>
+							</div>
+						</div>
+						<div class="FlexDisplay FlexRow"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+							<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+								<div class="icon">
+									<i class="mdi mdi-format-list-numbered" />
+								</div>
+								<select class="rounds">
+									<option value="title" selected="">Rounds...</option>
+								</select>
+								<div onclick="search_report(this)"  class="icon btn-color Divider-Left"  style="border-radius: 0 4px 4px 0;">
+									<i class="mdi mdi-magnify" />
+								</div>
+							</div>
+						</div>						
+					</div>
+					 
+				</div>
+			</div>
+			
+			<div class="FlexDisplay FlexGrow FlexColumn FlexBoxSizing-BorderBox" style="height:100%; margin:16px 16px 16px 16px; ">
+				<div class="Flex FlexColumn Round Shadow" style="position:relative; height:calc(100%); width:100%; background:#525659;">
+					<iframe id="reportViewer" class="FlexHidden" frameborder="0" seamless='seamless'  style="width:100%; height:100%; border:0;"></iframe>
+			
+					<!--<div class="FlexDisplay FlexRow Flex scroll scroll2"  style="width:100%; position:relative;  background:#525659;">
+						
+					scroll scroll2 Round-Bottom Shadow inner-container-parent
+					
+					</div>-->
+			
+			
+			
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+$('#backBtn').click(function(){
+	var page = System.IO.Path.Combine("web","eqa","views",backNavigation);
+	loadSubPage(System.IO.Path.Combine(System.Environment.get_CurrentDirectory(),page), true);
+});
+
+function search_report(item){
+	var _rounds 	=  $(".select-dropdown.rounds .current").text();
+	var _reportType	=  $(".select-dropdown.reportType .current").text();
+	
+	if(_rounds != "Rounds..." && _reportType != "Report Type..."){	
+		var _rounds_value = $(".select-dropdown.rounds").find(".list .option.selected").data("value");
+		var _report_type_value = $(".select-dropdown.reportType").find(".list .option.selected").data("value");			
+		if(!isEmpty(_rounds_value)  && !isEmpty(_report_type_value)){			
+			
+			var title = "Round "+_rounds_value;
+			if(_report_type_value == "Pdf"){
+			
+				var doc = new jsPDF({
+					orientation: 'p',
+					unit: 'pt',
+					format: 'a4',
+					hotfixes: [] // an array of hotfix strings to enable
+				});
+				
+				doc.setProperties({
+					title: title,
+					subject: "EQA",
+					author: "Kaga Connect + GLASER",
+					keywords: 'generated, javascript, web 2.0, ajax',
+					creator: 'Kaga Connect'
+				});
+			
+			
+				var data = doc.output('blob');
+				var blobUrl = URL.createObjectURL(data);
+				$('#reportViewer').addClass("FlexDisplay");															
+				$('#reportViewer').get(0).contentWindow.document.open();
+				$('#reportViewer').get(0).contentWindow.document.close();
+				$('#reportViewer').attr('src', blobUrl);
+			}
+			else if(_report_type_value == "Excel"){
+			
+				var doc = XLSX.utils.book_new();
+				doc.Props = {
+						Title: title,
+						Subject: "EQA",
+						Author: "Kaga Connect + GLASER",
+						CreatedDate: new Date()
+				};
+				
+				var ExcelData = [];
+				$('#reportViewer').addClass("FlexDisplay");															
+				$('#reportViewer').get(0).contentWindow.document.open();
+				$('#reportViewer').get(0).contentWindow.document.close();
+				$('#reportViewer').on("load", function() {
+					$('#reportViewer').get(0).contentWindow.Populate(ExcelData, doc, title);
+				});
+				$('#reportViewer').attr('src', "views/reports/SpreadsheetViewer.htm");
+			}
+		}
+		else clear_report();
+	}
+	else clear_report();
+}
+
+function clear_report(){
+
+}
+
+function load_rounds(_rounds_){
+	$(".select-dropdown.rounds").remove();
+	$(".rounds").html('<option value="title" selected="">Rounds...</option>');
+	_rounds_.forEach(function(i){
+		$(".rounds").append('<option value="'+i+'">Round '+i+'</option>');
+	});
+
+	create_custom_dropdowns();
+}
+
+create_custom_dropdowns();
+load_rounds([26,25,24,23,22,21,20]);
+
+closeLoadingPage();
+</script>

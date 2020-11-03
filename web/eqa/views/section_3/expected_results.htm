@@ -8,11 +8,364 @@
 		</div>
 	</div>
 	<div class="FlexDisplay Flex ContentPage  inner-section FadeIn"  style="width:100%; height:1px;">		
-		<div class="FlexDisplay FlexColumn" style="margin:auto auto;">
-			<div class="FlexDisplay" style="margin:0px auto 32px auto;">
-				<i class="mdi mdi-alert-outline" style="text-align:center; font-size:96px;"></i>
+		<div class="FlexDisplay FlexColumn FlexGrow FlexBoxSizing-BorderBox" style="height:100%; overflow: hidden; position:relative;">
+			<div class="FlexDisplay" style="margin:16px 16px 0px 16px;">
+				<div class="page-container Flex FlexColumn inner-container-with-overflow Round Shadow" style="position:relative; height:100%;  width:100%;">
+					
+					<div class="FlexDisplay FlexRow Divider-Bottom" style="height:32px; " >
+						<div class="FlexDisplay Flex">
+							<h4 class="feature-title mt-0" style="margin:8px 0px 0px 12px; font-size: 12px; font-weight:normal; line-height:16px;">FILTER</h4>
+						</div>	
+					</div>
+					<div class="FlexDisplay FlexRow">
+						<div class="FlexDisplay FlexRow"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+							<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+								<div class="icon">
+									<i class="mdi mdi-format-list-checks" />
+								</div>
+								<select class="profile">
+									<option value="title" selected="">Profile...</option>
+									<option value="HRT">HRT</option>
+									<option value="HRDT">HRDT</option>
+									<option value="HRPT">HRPT</option>
+								</select>
+							</div>
+						</div>
+						<div class="FlexDisplay FlexRow"  style="width:100%; height:32px; margin:8px 8px 8px 4px;">
+							<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+								<div class="icon">
+									<i class="mdi mdi-sort-alphabetical-ascending" />
+								</div>
+								<select class="cluster">
+									<option value="title" selected="">Cluster...</option>
+									<option value="A">A</option>
+									<option value="B">B</option>
+									<option value="C">C</option>
+									<option value="D">D</option>
+									<option value="E">E</option>
+									<option value="F">F</option>
+									<option value="G">G</option>
+									<option value="H">H</option>
+									<option value="I">I</option>
+									<option value="J">J</option>
+									<option value="K">K</option>
+									<option value="L">L</option>
+									<option value="M">M</option>
+									<option value="N">N</option>
+									<option value="O">O</option>
+									<option value="P">P</option>
+									<option value="Q">Q</option>
+									<option value="R">R</option>
+									<option value="S">S</option>
+									<option value="T">T</option>
+									<option value="U">U</option>
+									<option value="V">V</option>
+									<option value="W">W</option>
+									<option value="X">X</option>
+									<option value="Y">Y</option>
+									<option value="Z">Z</option>
+								</select>
+							</div>
+						</div>
+						<div class="FlexDisplay FlexRow"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+							<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+								<div class="icon">
+									<i class="mdi mdi-format-list-numbered" />
+								</div>
+								<input onkeypress="return isNumberKey(event)" class="expected_results_round" type="text" placeholder="Round"/>
+								<div onclick="search_expected(this)"  class="icon btn-color Divider-Left"  style="border-radius: 0 4px 4px 0;">
+									<i class="mdi mdi-magnify" />
+								</div>
+							</div>
+						</div>						
+					</div>
+					 
+				</div>
 			</div>
-			<div class="FlexDisplay">Expected Results : Under Development</div>
+			
+			<div class="FlexDisplay FlexRow Divider-Bottom inner-container-parent Round-Top" style="min-height:32px; max-height:32px; margin:16px 16px 0px 16px;" >
+				<div class="FlexDisplay Flex">
+					<h4 class="feature-title mt-0" style="margin:8px 0px 0px 12px; font-size: 12px; font-weight:normal; line-height:16px;">EXPECTED RESULTS</h4>
+				</div>					
+				<div id="saveExpectedResults" tooltip="save" flow="left" class="FlexHidden btn-clear">
+					<div style="margin:auto auto; width:16px height:16px; padding:0px 8px; font-size:16px;"><i class="mdi mdi-check-circle" /></div>
+				</div>
+			</div>				
+			<div class="FlexDisplay FlexGrow FlexColumn FlexBoxSizing-BorderBox scroll scroll2 Round-Bottom Shadow inner-container-parent" style="height:100%; margin:0px 16px 16px 16px; ">
+				<div class="Flex FlexColumn " style="position:relative; height:calc(100%); width:100%;">
+					<div class="Flex FlexColumn page-container" style="position:relative; padding:8px 0px 0px 0px; height:calc(100% - 0px);  width:100%;">
+						
+						<div class="FlexDisplay FlexRow">
+							<div class="FlexHidden FlexRow Assay1 Divider-Bottom"  style="width:100%; height:24px; padding:0px 4px 0px 8px;">
+								<h4 class="feature-title mt-0" style="margin:0px 0px 0px 12px; font-size: 12px; font-weight:normal; line-height:16px;">ASSAY 1</h4>
+							</div>
+							<div class="FlexHidden FlexRow Assay2 Divider-Bottom"  style="width:100%; height:24px; padding:0px 8px 0px 4px;">
+								<h4 class="feature-title mt-0" style="margin:0px 0px 0px 12px; font-size: 12px; font-weight:normal; line-height:16px;">ASSAY 2</h4>
+							</div>
+							<div class="FlexHidden FlexRow Assay3 Divider-Bottom"  style="width:100%; height:24px; padding:0px 4px 0px 8px;">
+								<h4 class="feature-title mt-0" style="margin:0px 0px 0px 12px; font-size: 12px; font-weight:normal; line-height:16px;">ASSAY 3</h4>
+							</div>
+							<div class="FlexHidden FlexRow  AssayFinal Divider-Bottom"  style="width:100%; height:24px; padding:0px 4px 0px 8px;">
+								<h4 class="feature-title mt-0" style="margin:0px 0px 0px 12px; font-size: 12px; font-weight:normal; line-height:16px;">FINAL RESULT</h4>
+							</div>							
+						</div>
+						
+						<div class="FlexHidden FlexDisplay FlexRow">
+							<div class="FlexHidden FlexRow 1A1"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A1</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow 2A1"  style="width:100%; height:32px; margin:8px 8px 8px 4px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A1</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow 3A1"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A1</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow FA1"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A1</option>
+										<option value="POSITIVE">POSITIVE</option>
+										<option value="NEGATIVE">NEGATIVE</option>
+										<option value="INDETERMINATE">INDETERMINATE</option>
+									</select>
+								</div>
+							</div>						
+						</div>
+						<div class="FlexHidden FlexDisplay FlexRow">
+							<div class="FlexHidden FlexRow 1A2"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A2</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow 2A2"  style="width:100%; height:32px; margin:8px 8px 8px 4px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A2</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow 3A2"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A2</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow FA2"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A1</option>
+										<option value="POSITIVE">POSITIVE</option>
+										<option value="NEGATIVE">NEGATIVE</option>
+										<option value="INDETERMINATE">INDETERMINATE</option>
+									</select>
+								</div>
+							</div>						
+						</div>
+						<div class="FlexHidden FlexDisplay FlexRow">
+							<div class="FlexHidden FlexRow 1A3"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A3</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow 2A3"  style="width:100%; height:32px; margin:8px 8px 8px 4px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A3</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow 3A3"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A3</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow FA3"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A3</option>
+										<option value="POSITIVE">POSITIVE</option>
+										<option value="NEGATIVE">NEGATIVE</option>
+										<option value="INDETERMINATE">INDETERMINATE</option>
+									</select>
+								</div>
+							</div>						
+						</div>
+						<div class="FlexHidden FlexDisplay FlexRow">
+							<div class="FlexHidden FlexRow 1A4"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A4</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow 2A4"  style="width:100%; height:32px; margin:8px 8px 8px 4px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A4</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow 3A4"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A4</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow FA4"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A4</option>
+										<option value="POSITIVE">POSITIVE</option>
+										<option value="NEGATIVE">NEGATIVE</option>
+										<option value="INDETERMINATE">INDETERMINATE</option>
+									</select>
+								</div>
+							</div>						
+						</div>
+						<div class="FlexHidden FlexDisplay FlexRow">
+							<div class="FlexHidden FlexRow 1A5"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A5</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow 2A5"  style="width:100%; height:32px; margin:8px 8px 8px 4px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A5</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow 3A5"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A5</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow FA5"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A5</option>
+										<option value="POSITIVE">POSITIVE</option>
+										<option value="NEGATIVE">NEGATIVE</option>
+										<option value="INDETERMINATE">INDETERMINATE</option>
+									</select>
+								</div>
+							</div>						
+						</div>
+						<div class="FlexHidden FlexDisplay FlexRow">
+							<div class="FlexHidden FlexRow 1A6"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A6</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow 2A6"  style="width:100%; height:32px; margin:8px 8px 8px 4px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A6</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow 3A6"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A6</option>
+										<option value="REACTIVE">REACTIVE</option>
+										<option value="NON-REACTIVE">NON-REACTIVE</option>
+										<option value="NA">N/A</option>
+									</select>
+								</div>
+							</div>
+							<div class="FlexHidden FlexRow FA6"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+								<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+									<select class="selector">
+										<option value="title" selected="">A6</option>
+										<option value="POSITIVE">POSITIVE</option>
+										<option value="NEGATIVE">NEGATIVE</option>
+										<option value="INDETERMINATE">INDETERMINATE</option>
+									</select>
+								</div>
+							</div>						
+						</div>
+						
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -20,6 +373,106 @@
 $('#backBtn').click(function(){
 	var page = System.IO.Path.Combine("web","eqa","views",backNavigation);
 	loadSubPage(System.IO.Path.Combine(System.Environment.get_CurrentDirectory(),page), true);
+});
+
+function search_expected(item){
+	var _round 	=  $(".expected_results_round").val();
+	var _profile 	=  $(".select-dropdown.profile .current").text();
+	var _cluster 	=  $(".select-dropdown.cluster .current").text();
+	
+	if(_profile != "Profile..." && _cluster != "Cluster..." && !isEmpty(_round)){
+	
+		var _profile_value = $(".select-dropdown.profile").find(".list .option.selected").data("value");
+		var _cluster_value = $(".select-dropdown.cluster").find(".list .option.selected").data("value");
+			
+		if(!isEmpty(_profile_value) &&!isEmpty(_cluster_value)){			
+			clear_options();
+			
+			$(".AssayFinal").addClass("FlexDisplay");
+			$("#saveExpectedResults").addClass("FlexDisplay");
+			
+			for(var x=1; x<=3; x++){
+				for(var y=1; y<=6; y++){
+				
+					if(_profile_value == "HRT"){
+						if(x != 3){
+							$(".Assay"+x).addClass("FlexDisplay");
+							if(y <= 3){
+								$("."+x+"A"+y).addClass("FlexDisplay");
+								if(x == 1)
+									$(".FA"+y).addClass("FlexDisplay");
+							}
+						}
+					}					
+					else if(_profile_value == "HRDT"){
+						if(x != 3){
+							$(".Assay"+x).addClass("FlexDisplay");
+							$("."+x+"A"+y).addClass("FlexDisplay");
+							if(x == 1)
+								$(".FA"+y).addClass("FlexDisplay");
+						}
+					}
+					else if(_profile_value == "HRPT"){
+						$(".Assay"+x).addClass("FlexDisplay");
+						$("."+x+"A"+y).addClass("FlexDisplay");
+						if(x == 1)
+							$(".FA"+y).addClass("FlexDisplay");
+					}
+				}
+			}
+		}
+		else clear_options();
+	}
+	else clear_options();
+}
+
+function clear_options(){
+	$(".AssayFinal").removeClass("FlexDisplay");
+	$("#saveExpectedResults").removeClass("FlexDisplay");
+	
+	for(var x=1; x<=3; x++){
+		$(".Assay"+x).removeClass("FlexDisplay");
+		
+		for(var y=1; y<=6; y++){
+			$("."+x+"A"+y).removeClass("FlexDisplay");
+			SelectItemByValue($("."+x+"A"+y+" .selector"),"title");
+			if(x == 1){
+				$(".FA"+y).removeClass("FlexDisplay");
+				SelectItemByValue($(".FA"+y+" .selector"),"title");
+			}
+		}
+	}
+}
+
+function add_dropdown_options(item, options, isFilled=false, isScrollable=false){
+	var _selector = $(item);
+	var _selector_list = _selector.find(".list");
+	
+	if(_selector != undefined && _selector != null && isFilled){
+		_selector.addClass("fill");
+	}
+	
+	if(_selector_list != undefined && _selector_list != null){
+		if(!isEmpty(options))_selector_list.css(options);
+		if(isScrollable)_selector_list.addClass("scroll scroll2");
+	}
+}
+
+create_custom_dropdowns();
+
+add_dropdown_options(".select-dropdown.cluster", {"overflow-y": "auto", "max-height": "200px"}, false, true);
+
+for(var x=1; x<=3; x++){
+	for(var y=1; y<=6; y++){
+		add_dropdown_options("."+x+"A"+y+" .selector", null, true, false);
+		if(x == 1)
+			add_dropdown_options(".FA"+y+" .selector", null, true, false);
+	}
+}
+
+$("#saveExpectedResults").unbind( "click" );
+$('#saveExpectedResults').click(function(){ 
+	
 });
 
 closeLoadingPage();
