@@ -1,0 +1,2102 @@
+<div class="FlexDisplay FlexColumn container"  style="margin:0px; padding:0px; height:100%;">
+	<div class="FlexDisplay" style="background:#535FD7; height:48px; box-shadow:0 1px 2px rgba(0, 0, 0, 0.3);" >
+		<div id="backBtn"  class="nav-button" >
+			<i class="mdi mdi-apps"></i>
+		</div>
+		<div class="FlexDisplay">
+			<span class="BEQAS-Title" style="white-space:nowrap; overflow:hidden; text-overflow: ellipsis; font-weight:normal; font-size:12px; color:#ffffff; margin:auto 8px;">Basic External Quality Assessment System</span>
+		</div>
+	</div>
+	<div class="FlexDisplay Flex ContentPage  inner-section FadeIn"  style="width:100%; height:1px;">
+		<div class="FlexDisplay FlexColumn FlexGrow FlexBoxSizing-BorderBox" style="height:100%; overflow: hidden; position:relative;">
+			<div class="FlexDisplay Flex FlexGrow" style="margin:16px 16px 0px 16px; height:calc(50% - 0px);">
+				<div class="page-container Flex FlexColumn Overflow-Hidden Round Shadow" style="position:relative; height:100%; background:white;  width:100%;">
+					 <div id="mapid" style="width: 100%; height: 100%;"></div>
+				</div>
+			</div>
+			<div class="FlexDisplay Flex FlexGrow" style="margin:16px 16px 16px 16px; height:calc(50% - 0px);">
+				<div class="page-container Flex FlexColumn Overflow-Hidden inner-container Round Shadow" style="position:relative; height:calc(100% - 0px);  width:100%;">
+					<div class="FlexDisplay FlexRow Divider-Bottom" style="height:32px; " >
+						<div class="FlexDisplay Flex">
+							<h4 class="feature-title mt-0" style="margin:8px 0px 0px 12px; font-size: 12px; font-weight:normal; line-height:16px;">FACILITIES</h4>
+						</div>
+						<div id="addFacility" tooltip="add facility" flow="left" class="FlexDisplay btn-clear">
+							<div style="margin:auto auto; width:16px height:16px; padding:0px 16px;"><i class="mdi mdi-file-document-box-plus-outline" /></div>
+						</div>
+					</div>
+					<div class="FlexDisplay FlexColumn FlexBoxSizing-BorderBox" style="width:100%;  height:calc(100% - 32px); z-index:2;">
+						<div class="FlexDisplay FlexColumn"  style="width:100%; min-height: 24px; max-height: 24px;">
+							<div class="FlexDisplay FlexRow Divider-Bottom Overflow-Hidden " style="width:100%; padding:0px;">
+								<div class="FlexDisplay Divider-Right" style="min-width:32px; max-width:32px; min-height: 32px; max-height: 32px; padding:7px 0px 0px 0px;"><span style="text-align:center; display:inline-block; width:100%; font-size:9px; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1;"></div>
+								<div class="FlexDisplay Divider-Right" style="min-width:32px; max-width:32px; min-height: 32px; max-height: 32px; padding:7px 0px 0px 0px;"><span style="text-align:center; display:inline-block; width:100%; font-size:9px; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1;">GPS</div>
+								<!--<div class="FlexDisplay Divider-Right" style="min-width:32px; max-width:32px; min-height: 32px; max-height: 32px; padding:7px 0px 0px 0px;"><span style="text-align:center; display:inline-block; width:100%; font-size:9px; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1;">MAP</div>-->
+								<div class="FlexDisplay Divider-Right" style="min-width:100px; max-width:100px; min-height: 32px; max-height: 32px; padding:7px 0px 0px 0px;"><span style="text-align:center; display:inline-block; width:100%; font-size:9px; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1;">ID</span></div>
+								<!--<div class="FlexDisplay Divider-Right" style="min-width:100px; max-width:100px; min-height: 32px; max-height: 32px; padding:7px 0px 0px 0px;"><span style="text-align:center; display:inline-block; width:100%; font-size:9px; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1;">LOCATION</span></div>-->
+								<div class="FlexDisplay Divider-Right" style="min-width:100px; max-width:100px; min-height: 32px; max-height: 32px; overflow:hidden; padding:7px 8px 0px 8px; font-size:9px;"><span style="white-space: nowrap; width:100%; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1;">REGION</span></div>
+								<div class="FlexDisplay Divider-Right" style="min-width:100px; max-width:100px; min-height: 32px; max-height: 32px; overflow:hidden; padding:7px 8px 0px 8px; font-size:9px;"><span style="white-space: nowrap; width:100%; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1;">DISTRICT</span></div>
+								<!--<div class="FlexDisplay Divider-Right" style="min-width:100px; max-width:100px; min-height: 32px; max-height: 32px; overflow:hidden; padding:7px 8px 0px 8px; font-size:9px;"><span style="white-space: nowrap; width:100%; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1;">COUNCIL</span></div>-->
+								<div class="FlexDisplay Divider-Right" style="min-width:100px; max-width:100px; min-height: 32px; max-height: 32px; overflow:hidden; padding:7px 8px 0px 8px; font-size:9px;"><span style="white-space: nowrap; width:100%; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1;">TYPE</span></div>
+								<div class="FlexDisplay" style="width:100%; min-height: 32px; max-height: 32px; overflow:hidden; padding:7px 8px 0px 8px; font-size:9px;"><span style="white-space: nowrap; width:100%; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1;">NAME</span></div>			
+							</div>	
+						</div>
+						<div class="FlexDisplay FlexColumn FlexBoxSizing-BorderBox scroll scroll2 FacilitiesList" style="overflow-y:auto; height:calc(100% - 56px);">
+						
+						</div>
+						<div id="pagingBox" class="FlexDisplay Divider-Top FlexRow" style="width:100%; min-height:32px; max-height:32px;"></div>
+					</div>			
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+var fac_dlg = null;
+var map = null;
+var mapMarkers = null;
+
+$("#backBtn").unbind( "click" );
+$('#backBtn').click(function(){
+	var page = System.IO.Path.Combine("web","eqa","views",backNavigation);
+	loadSubPage(System.IO.Path.Combine(System.Environment.get_CurrentDirectory(),page), true);
+});
+	
+function proceedTo(item, index){
+	var navigateFrom = $('.animated-sub-page.active');
+	var indexFrom = navigateFrom.data("path").replace("section-","");	
+	
+	navigateFrom.removeClass('transition-enter');
+	navigateFrom.removeClass('transition-grow');
+	navigateFrom.removeClass('transition-shrink');
+	navigateFrom.removeClass('transition-enter-right');
+	navigateFrom.removeClass('transition-enter-left');
+	navigateFrom.addClass('transition-busy');
+	navigateFrom.addClass('transition-shrink');
+	
+	setTimeout(function(){
+		if(index != indexFrom){					
+			var navigateTo = $("#mainPage").find(`[data-path='section-${index}']`);
+										
+			navigateFrom.removeClass('transition-busy');
+			navigateFrom.removeClass('transition-enter');
+			navigateFrom.removeClass('transition-grow');
+			navigateFrom.removeClass('transition-shrink');
+			navigateFrom.removeClass('transition-enter-right');
+			navigateFrom.removeClass('transition-enter-left');
+			if(indexFrom < index) navigateFrom.addClass('transition-leave-left');
+			else navigateFrom.addClass('transition-leave-right');
+			  
+			navigateTo.removeClass('transition-busy');
+			navigateTo.removeClass('transition-leave');
+			navigateTo.removeClass('transition-grow');
+			navigateTo.removeClass('transition-shrink');
+			navigateTo.removeClass('transition-leave-right');
+			navigateTo.removeClass('transition-leave-left');
+			if(indexFrom < index) navigateTo.addClass('transition-enter-right');
+			else navigateTo.addClass('transition-enter-left');
+			
+			navigateFrom.removeClass("active");
+			navigateTo.addClass('active');
+		}
+		else {
+			navigateFrom.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+				navigateFrom.removeClass('transition-shrink');
+				navigateFrom.removeClass('transition-grow');
+			});
+			
+			navigateFrom.addClass('transition-grow');					
+		}
+	}, 500);
+}
+
+function load(item, section){
+	if(section == "region"){
+	
+	}
+	else if(section == "district"){
+	
+	}
+	else if(section == "council"){
+	
+	}
+	else if(section == "type"){
+	
+	}
+}
+
+function loadPerView(facilities, options, loadPerView){
+	if(facilities != undefined && facilities != null && facilities.length > 0){
+		let sz = (facilities.length > loadPerView ? loadPerView : facilities.length);
+		for(var x=0; x<sz; x++){
+			var facility = facilities.shift();
+			
+			var isChecked = false;
+			if(options != undefined && options != null){
+				if(options.FacilityNumber != undefined && options.FacilityNumber != null &&
+				   options.Location != undefined && options.Location != null){
+					if(facility.FacilityNumber == options.FacilityNumber && facility.Location == options.Location){
+						isChecked = true;
+					}
+				}
+			}
+			
+			var statusType = "mdi-map-marker";
+			var statusColor = "#01579B";
+			
+			if(facility.Latitude == "" || facility.Longitude == ""){
+				statusType = "mdi-map-marker-off";
+				statusColor = "rgba(0,0,0,0.4)";
+			}
+			
+			var operating = "mdi-help-circle";
+			var operatingColor = "#4A148C";
+			
+			if(facility.OperatingStatus == "Closed"){
+				operating = "mdi-cancel";
+				operatingColor = "red";
+			}
+			else if(facility.OperatingStatus == "Closed (Temporary)"){
+				operating = "mdi-alert-circle";
+				operatingColor = "#FFD600";
+			}
+			else if(facility.OperatingStatus == "Operating" || facility.OperatingStatus == "Opert"){
+				operating = "mdi-check-circle";
+				operatingColor = "#669900";
+			}
+			else if(facility.OperatingStatus == "Pending Operation - Under Construction" || facility.OperatingStatus == "Pending Operation - Construction Complete"){
+				operating = "mdi-clock-alert";
+				operatingColor = "#C51162";
+			}
+			
+			//var mappedType = "mdi-link-off";
+			//if(item.IsMapped == "Yes")mappedType = "mdi-link";
+			
+			var FacilityNumber = facility.FacilityNumber;
+			var Location = facility.Location;
+			var Zone = facility.Zone;				
+			var Region  = facility.Region;	
+			var District  = facility.District;	
+			var Council  = facility.Council;	
+			var FacilityType  = facility.FacilityType;
+			var FacilityName = facility.FacilityName;
+			
+			var Latitude = facility.Latitude;
+			var Longitude = facility.Longitude;
+			
+			var IsDefault = facility.IsDefault;
+			
+			
+			var facility = '<div data-isdefault="'+IsDefault+'" data-facilitynumber="'+FacilityNumber+'" data-facilityname="'+FacilityName+'" data-location="'+Location+'" data-zone="'+Zone+'" data-region="'+Region+'" data-district="'+District+'" data-council="'+Council+'" data-facilitytype="'+FacilityType+'" data-latitude="'+Latitude+'" data-longitude="'+Longitude+'" onclick="facility_selected(this)" class="FlexDisplay FlexRow Divider-Bottom Overflow-Hidden CheckBoxBold FacilityItem '+(isChecked ? "Checked" : "")+'" style="width:100%; min-width:100%; min-height: 32px; max-height: 32px;" >'; 
+				facility += '	<div class="FlexDisplay Divider-Right" style="min-width:32px; max-width:32px; height:100%; padding:0px 0px 0px 0px;"><span style="text-align:center; display:inline-block; width:100%;"><i class="mdi '+operating+'"></i></span></div>';
+				facility += '	<div class="FlexDisplay Divider-Right" style="min-width:32px; max-width:32px; height:100%; padding:0px 0px 0px 0px;"><span style="text-align:center; display:inline-block; width:100%; color:'+statusColor+';"><i class="mdi '+statusType+'"></i></span></div>';
+				facility += '	<div class="FacilityNumber FlexDisplay Divider-Right" style="min-width:100px; max-width:100px; height:100%; padding:8px 0px 0px 0px;"><span style="text-align:center; display:inline-block; width:100%; font-size:11px; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1;">'+FacilityNumber+'</span></div>';
+				facility += '	<div class="FacilityRegion FlexDisplay Divider-Right" style="min-width:100px; max-width:100px; width:100%; height:100%; overflow:hidden; padding:8px 8px 0px 8px; font-size:11px;"><span style="white-space: nowrap; width:100%; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1.3;">'+Region+'</span></div>';
+				facility += '	<div class="FacilityDistrict FlexDisplay Divider-Right" style="min-width:100px; max-width:100px; width:100%; height:100%; overflow:hidden; padding:8px 8px 0px 8px; font-size:11px;"><span style="white-space: nowrap; width:100%; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1.3;">'+District+'</span></div>';
+				facility += '	<div class="FacilityType FlexDisplay Divider-Right" style="min-width:100px; max-width:100px; width:100%; height:100%; overflow:hidden; padding:8px 8px 0px 8px; font-size:11px;"><span style="white-space: nowrap; width:100%; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1.3;">'+FacilityType+'</span></div>';
+				facility += '	<div class="FacilityName FlexDisplay" style="width:100%; height:100%; overflow:hidden; padding:8px 8px 0px 8px; font-size:11px;"><span style="white-space: nowrap; width:100%; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:1; line-height:1.3;">'+FacilityName+'</span></div>';						
+				facility += '	<div class="FlexDisplay" style="cursor:pointer; min-height: 32px; max-height: 32px; padding:0px 8px 0px 8px; font-size:20px;" onclick="event.stopPropagation(); edit_facility(this)"><i class="mdi mdi-square-edit-outline" style="margin:0px; padding:0px;"></i></div>';
+				facility += '	<div class="FlexDisplay" style="cursor:pointer; min-height: 32px; max-height: 32px; padding:0px 8px 0px 8px; font-size:20px;" onclick="event.stopPropagation(); delete_facility(this)"><i class="mdi mdi-delete-sweep" style="margin:0px; padding:0px;"></i></div>';
+				facility += '</div>';	// tooltip="Edit" flow="left" tooltip="Delete" flow="left"
+				
+			$(".FacilitiesList").append(facility);
+		}
+	}
+}
+
+function populateData(id, options){
+	$(".FacilitiesList").html('');
+	
+	var _facilities = [];
+	var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+	if(con != null){
+		con.open();
+
+		var query  = "SELECT ";
+			query += "	`ID` ";
+			query += "	, `FacilityNumber` ";
+			query += "	, `FacilityName` ";
+			query += "	, `CommonName` ";
+			query += "	, `Zone` ";
+			query += "	, `Region` ";
+			query += "	, `District` ";
+			query += "	, `Council` ";
+			query += "	, `Ward` ";
+			query += "	, `VillageStreet` ";
+			query += "	, `FacilityType` ";
+			query += "	, `OperatingStatus` ";
+			query += "	, IFNULL(`Latitude`, '') as `Latitude` ";
+			query += "	, IFNULL(`Longitude`, '') as `Longitude` ";
+			query += "	, `Location`  ";
+			query += "	, `IsDefault`  ";
+			query += "FROM `facilities` ";
+			query += "WHERE (case when (substr(`FacilityName` ,1,1) GLOB '*[^0-9]*') = 0 then '0_9' ";
+			query += "	  		  else upper(substr(`FacilityName` ,1,1)) ";
+			query += "	      end) = @ID";
+				
+		var comm = con.createCommand(query);
+		if(comm != null){
+			comm.addParameter("@ID", "String", id);
+			var reader = comm.executeReader();
+			if(reader != null){
+				while(reader.read()){
+					var row = JSON.parse(reader.getValues());	
+					if(row != undefined && row != null)_facilities.push(row);
+				}
+				reader.close();
+				con.close();				
+			}
+			else con.close();
+		}
+		else con.close();
+	}
+	
+	
+	loadPerView(_facilities, options, 500);
+	$(".FacilitiesList").scrollTop(0);
+	
+	$('.FacilitiesList').unbind( "scroll" );
+	$('.FacilitiesList').on('scroll', function() {
+		let div = $(this).get(0);
+				
+		if(div.scrollTop + div.clientHeight == div.scrollHeight) {
+			loadPerView(_facilities, options, 500);
+		}
+	});
+}
+
+function facility_selected(item){
+	$(".FacilitiesList .CheckBoxBold").each(function(){
+		$(this).removeClass('Checked');
+	});
+
+	$(item).addClass('Checked');
+
+	var _FacilityNumber = $(item).children().eq(1).text();
+	var _Region = $(item).children().eq(2).text();
+	var _District = $(item).children().eq(3).text();
+	var _FacilityType = $(item).children().eq(4).text();
+	var _FacilityName = $(item).children().eq(5).text();
+	
+	var _Latitude = $(item).data("latitude");
+	var _Longitude = $(item).data("longitude");
+		
+	if(map != undefined && map != null){
+		if(_Latitude.toString() != "" && _Longitude != ""){
+			var latlong = _Longitude+","+_Latitude;				
+			var reCenter = getLatLong(latlong);	
+
+			map.options.maxZoom = 18;
+			map.eachLayer(function(layer) {
+				if(layer instanceof L.TileLayer )
+					layer.options.maxZoom = 18;
+			});
+
+			map.flyTo([reCenter[0]-0.002,reCenter[1]],17);
+			
+			mapMarkers.clearLayers();
+			var marker = L.marker(reCenter);
+			marker.addTo(mapMarkers);
+		}
+		else {
+			mapMarkers.clearLayers();
+			map.options.maxZoom = 2;
+			map.eachLayer(function(layer) {
+				if(layer instanceof L.TileLayer )
+					layer.options.maxZoom = 2;
+			});
+			map.setView([-50.109307, 6.434463],2);
+		}
+	}
+
+}
+
+function loadMap(){
+	/*var mymap = L.map('mapid').setView([6.7924, 39.2083], 13);
+		L.tileLayer(
+		//'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
+		'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+		{
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		maxZoom: 18,
+		//id: 'mapbox.streets',
+		//accessToken: 'your.mapbox.access.token'
+	}).addTo(mymap);*/
+
+	var map = L.map('mapid').setView([48.464717, 35.046183], 12);
+
+	var layer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+	  maxZoom: 18,
+	  useCache: true
+	});
+
+	// Listen to cache hits and misses and spam the console
+	// The cache hits and misses are only from this layer, not from the WMS layer.
+	layer.on('tilecachehit', function(ev) {
+	  console.log('Cache hit: ', ev.url);
+	});
+	layer.on('tilecachemiss', function(ev) {
+	  console.log('Cache miss: ', ev.url);
+	});
+
+	layer.addTo(map);
+
+	// L.TileLayer.PouchDBCached
+	L.TileLayer.addInitHook(function() {
+		if (!this.options.useCache) {
+			this._db = null;
+			this._canvas = null;
+			return;
+		}
+
+		this._db = new PouchDB('offline-tiles');
+		this._canvas = document.createElement('canvas');
+
+		if (!(this._canvas.getContext && this._canvas.getContext('2d'))) {
+			// HTML5 canvas is needed to pack the tiles as base64 data. If
+			// the browser doesn't support canvas, the code will forcefully
+			// skip caching the tiles.
+			this._canvas = null;
+		}
+	});
+
+	L.TileLayer.prototype.options.useCache = false;
+	L.TileLayer.prototype.options.saveToCache = true;
+	L.TileLayer.prototype.options.useOnlyCache = false;
+	L.TileLayer.prototype.options.cacheFormat = 'image/png';
+	L.TileLayer.prototype.options.cacheMaxAge = 24 * 3600 * 1000;
+
+	L.TileLayer.include({
+		// Overwrites L.TileLayer.prototype.createTile
+		createTile: function(coords, done) {
+		var tile = document.createElement('img');
+
+		tile.onerror = L.bind(this._tileOnError, this, done, tile);
+
+		if (this.options.crossOrigin) {
+			tile.crossOrigin = '';
+		}
+
+		/*
+		 Alt tag is *set to empty string to keep screen readers from reading URL and for compliance reasons
+		 http://www.w3.org/TR/WCAG20-TECHS/H67
+		 */
+		tile.alt = '';
+
+		var tileUrl = this.getTileUrl(coords);
+
+		if (this.options.useCache && this._canvas) {
+			this._db.get(tileUrl, {
+				revs_info: true
+			}, this._onCacheLookup(tile, tileUrl, done));
+		} else {
+			// Fall back to standard behaviour
+			tile.onload = L.bind(this._tileOnLoad, this, done, tile);
+		}
+
+		tile.src = tileUrl;
+		return tile;
+	},
+
+	// Returns a callback (closure over tile/key/originalSrc) to be run when the DB
+	// backend is finished with a fetch operation.
+	_onCacheLookup: function(tile, tileUrl, done) {
+		return function(err, data) {
+			if (data) {
+				this.fire('tilecachehit', {
+					tile: tile,
+					url: tileUrl
+				});
+				
+				if (Date.now() > data.timestamp + this.options.cacheMaxAge && !this.options.useOnlyCache) {
+					// Tile is too old, try to refresh it
+					// console.log('Tile is too old: ', tileUrl);
+
+					if (this.options.saveToCache) {
+						tile.onload = L.bind(this._saveTile, this, tile, tileUrl, data._revs_info[0].rev, done);
+					}
+					tile.crossOrigin = 'Anonymous';
+					tile.src = tileUrl;
+					tile.onerror = function(ev) {
+						// If the tile is too old but couldn't be fetched from the network,
+						// serve the one still in cache.
+						this.src = data.dataUrl;
+					}
+				} else {
+					// Serve tile from cached data
+					// console.log('Tile is cached: ', tileUrl);
+					tile.onload = L.bind(this._tileOnLoad, this, done, tile);
+					tile.src = data.dataUrl; // data.dataUrl is already a base64-encoded PNG image.
+				}
+			} else {
+				this.fire('tilecachemiss', {
+					tile: tile,
+					url: tileUrl
+				});
+				
+				if (this.options.useOnlyCache) {
+					// Offline, not cached
+					// console.log('Tile not in cache', tileUrl);
+					tile.onload = L.Util.falseFn;
+					tile.src = L.Util.emptyImageUrl;
+				} else {
+					// Online, not cached, request the tile normally
+					// console.log('Requesting tile normally', tileUrl);
+					if (this.options.saveToCache) {
+						tile.onload = L.bind(this._saveTile, this, tile, tileUrl, null, done);
+					} else {
+						tile.onload = L.bind(this._tileOnLoad, this, done, tile);
+					}
+					tile.crossOrigin = 'Anonymous';
+					tile.src = tileUrl;
+				}
+			}
+		}.bind(this);
+	},
+
+	// Returns an event handler (closure over DB key), which runs
+	// when the tile (which is an <img>) is ready.
+	// The handler will delete the document from pouchDB if an existing revision is passed.
+	// This will keep just the latest valid copy of the image in the cache.
+	_saveTile: function(tile, tileUrl, existingRevision, done) {
+		if (this._canvas === null) return;
+		this._canvas.width = tile.naturalWidth || tile.width;
+		this._canvas.height = tile.naturalHeight || tile.height;
+
+		var context = this._canvas.getContext('2d');
+		context.drawImage(tile, 0, 0);
+
+		var dataUrl = this._canvas.toDataURL(this.options.cacheFormat);
+		var doc = {
+			dataUrl: dataUrl,
+			timestamp: Date.now()
+		};
+
+		if (existingRevision) {
+			this._db.remove(tileUrl, existingRevision);
+		}
+		this._db.put(doc, tileUrl, doc.timestamp);
+
+		if (done) {
+			done();
+		}
+	},
+
+	// Seeds the cache given a bounding box (latLngBounds), and
+	// the minimum and maximum zoom levels
+	// Use with care! This can spawn thousands of requests and
+	// flood tileservers!
+	seed: function(bbox, minZoom, maxZoom) {
+		if (!this.options.useCache) return;
+		if (minZoom > maxZoom) return;
+		if (!this._map) return;
+
+		var queue = [];
+
+		for (var z = minZoom; z <= maxZoom; z++) {
+
+			var northEastPoint = this._map.project(bbox.getNorthEast(), z);
+			var southWestPoint = this._map.project(bbox.getSouthWest(), z);
+
+			// Calculate tile indexes as per L.TileLayer._update and
+			// L.TileLayer._addTilesFromCenterOut
+			var tileSize = this.getTileSize();
+			var tileBounds = L.bounds(
+			L.point(Math.floor(northEastPoint.x / tileSize.x), Math.floor(northEastPoint.y / tileSize.y)),
+			L.point(Math.floor(southWestPoint.x / tileSize.x), Math.floor(southWestPoint.y / tileSize.y)));
+
+			for (var j = tileBounds.min.y; j <= tileBounds.max.y; j++) {
+				for (var i = tileBounds.min.x; i <= tileBounds.max.x; i++) {
+					point = new L.Point(i, j);
+					point.z = z;
+					queue.push(this._getTileUrl(point));
+				}
+			}
+		}
+
+		var seedData = {
+			bbox: bbox,
+			minZoom: minZoom,
+			maxZoom: maxZoom,
+			queueLength: queue.length
+		}
+		this.fire('seedstart', seedData);
+		var tile = this._createTile();
+		tile._layer = this;
+		this._seedOneTile(tile, queue, seedData);
+	},
+
+	_createTile: function() {
+		return document.createElement('img');
+	},
+
+	// Modified L.TileLayer.getTileUrl, this will use the zoom given by the parameter coords
+	// instead of the maps current zoomlevel.
+	_getTileUrl: function(coords) {
+		var zoom = coords.z;
+		if (this.options.zoomReverse) {
+			zoom = this.options.maxZoom - zoom;
+		}
+		zoom += this.options.zoomOffset;
+		return L.Util.template(this._url, L.extend({
+			r: this.options.detectRetina && L.Browser.retina && this.options.maxZoom > 0 ? '@2x' : '',
+			s: this._getSubdomain(coords),
+			x: coords.x,
+			y: this.options.tms ? this._globalTileRange.max.y - coords.y : coords.y,
+			z: this.options.maxNativeZoom ? Math.min(zoom, this.options.maxNativeZoom) : zoom
+		}, this.options));
+	},
+
+	// Uses a defined tile to eat through one item in the queue and
+	// asynchronously recursively call itself when the tile has
+	// finished loading.
+	_seedOneTile: function(tile, remaining, seedData) {
+		if (!remaining.length) {
+			this.fire('seedend', seedData);
+			return;
+		}
+		this.fire('seedprogress', {
+			bbox: seedData.bbox,
+			minZoom: seedData.minZoom,
+			maxZoom: seedData.maxZoom,
+			queueLength: seedData.queueLength,
+			remainingLength: remaining.length
+		});
+
+		var url = remaining.pop();
+
+		this._db.get(url, function(err, data) {
+			if (!data) {
+				/// FIXME: Do something on tile error!!
+				tile.onload = function(ev) {
+					this._saveTile(tile, url, null); //(ev)
+					this._seedOneTile(tile, remaining, seedData);
+				}.bind(this);
+				tile.crossOrigin = 'Anonymous';
+				tile.src = url;
+			} else {
+				this._seedOneTile(tile, remaining, seedData);
+			}
+		}.bind(this));
+	  }
+	});
+}
+
+function getLatLong(data){
+	if(data == undefined) return null;
+	var d = data.split(",");
+	return [d[1], d[0]];
+}
+
+function Render(item){
+	
+	var maxZoom = 2;
+	var latlong = "";
+	
+	if(item.Latitude != "" && item.Longitude != ""){
+		latlong = item.Longitude+","+item.Latitude;	
+		maxZoom = 18;
+	}
+	
+	L.Icon.Default.imagePath = "images/";	
+	
+	mapMarkers = new L.LayerGroup();
+	var _map = L.map('mapid', { zoomControl:false, layers: [mapMarkers] });	
+	//var layer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	var layer = L.tileLayer('/openstreetmap/BEQAS 3.6/{s}/{z}/{x}/{y}', { //Using an extension to allow User-Agent to be passed
+		maxZoom: maxZoom,
+		minZoom: 2,
+		attribution: '&copy; <u style="color:#0078A8;">OpenStreetMap</u> contributors',
+		id: 'mapbox.streets'
+	});
+	layer.addTo(_map);
+	
+	if(item.Latitude != "" && item.Longitude != ""){
+		var reCenter = getLatLong(latlong);	
+		_map.setView([reCenter[0],reCenter[1]-0.000],17);
+		
+		//var marker = L.marker(getLatLong(latlong)).addTo(_map);
+		var marker = L.marker(reCenter);
+		marker.addTo(mapMarkers);
+		
+		//mapMarkers = L.layerGroup(marker);
+		//mapMarkers.addTo(_map);
+	}
+	else {
+		//_map.setView([-50.109307, 6.434463],2);
+		_map.setView([0.31573, 13.007813],2);
+		//map.setView([0,0],2);
+		//map.panTo([0,0]);
+	}
+	
+	//map.on("moveend", function () {
+	//  console.log(map.getCenter().toString());
+	//});
+	
+	
+	//$('.leaflet-control-attribution').children().first().hide();
+	$('.leaflet-control-attribution').html('<span style="pointer-events: none;"><u style="color:#0078A8;">Leaflet</u> | &copy; <u style="color:#0078A8;">OpenStreetMap</u> contributors</span>');
+	
+	/*_map.on('dragend', function onDragEnd(){
+		var width = _map.getBounds().getEast() - _map.getBounds().getWest();
+		var height = _map.getBounds().getNorth() - _map.getBounds().getSouth();
+
+		console.log (
+			'center:' + _map.getCenter() +'\n'+
+			'width:' + width +'\n'+
+			'height:' + height +'\n'+
+			'size in pixels:' + _map.getSize()
+		)
+	});*/
+		
+	return _map;
+}
+
+function reset_dropdown(item, name, title, items){
+	var _selector = $(item).find(".select-dropdown."+name);
+	if(_selector != undefined && _selector != null){
+		_selector.remove();			
+		$(item).find("select."+name).html('<option selected="">'+title+'...</option>');
+		items.forEach(function(element, index){
+			$(item).find("select."+name).append('<option>'+element+'</option>');
+		});
+	}
+}
+
+function add_dropdown_scroll(item, name, options){
+	var _selector = $(item).find(".select-dropdown."+name).find(".list");
+	if(_selector != undefined && _selector != null){
+		_selector.addClass("scroll scroll2");
+		_selector.css(options);
+	}
+}
+
+function location_selected(item){
+	$(item).parent().removeClass("is-invalid");
+	$(item).parent().attr("tooltip","");
+						
+	var _location = $(fac_dlg.el).find(".select-dropdown.locationsSelector").find(".current").text();
+	if(_location != undefined && _location != null && _location != "Locations..."){
+	
+		var ii = [];
+		var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+		if(con != null){
+			con.open();
+
+			var query   = "SELECT distinct ";
+				query  += "(CASE WHEN `Location` = 'Mainland'  ";
+				query  += "      THEN `Zone` ELSE `Region` "; 
+				query  += "END) as `Area` ";
+				query  += "FROM `facilities` "; 
+				query  += "WHERE `Location` = @Location  "; 
+				query  += "ORDER BY `Zone`, `Region` "; 
+			
+			var comm = con.createCommand(query);
+			if(comm != null){
+				comm.addParameter("@Location", "String", _location);
+				var reader = comm.executeReader();
+				if(reader != null){
+					while(reader.read()){
+						var row = JSON.parse(reader.getValues());	
+						if(row != undefined && row != null)ii.push(row.Area);
+					}
+					reader.close();
+					con.close();				
+				}
+				else con.close();
+			}
+			else con.close();
+		}
+		
+		if(ii != undefined && ii != null){
+			if(_location == "Mainland") {
+				reset_dropdown($(fac_dlg.el), "zonesSelector", "Zones", ii);
+				reset_dropdown($(fac_dlg.el), "regionsSelector", "Regions", []);
+			}
+			else {
+				reset_dropdown($(fac_dlg.el), "zonesSelector", "Zones", []);
+				reset_dropdown($(fac_dlg.el), "regionsSelector", "Regions", ii);
+			}
+			
+			reset_dropdown($(fac_dlg.el), "districtsSelector", "Districts", []);
+			reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);
+		}
+		
+		create_custom_dropdowns();
+		
+		add_dropdown_scroll($(fac_dlg.el), "zonesSelector", {"overflow-y": "auto", "max-height": "200px"});
+		add_dropdown_scroll($(fac_dlg.el), "regionsSelector", {"overflow-y": "auto", "max-height": "200px"});
+		
+	}
+	else{
+		reset_dropdown($(fac_dlg.el), "zonesSelector", "Zones", []);
+		reset_dropdown($(fac_dlg.el), "regionsSelector", "Regions", []);		
+		reset_dropdown($(fac_dlg.el), "districtsSelector", "Districts", []);
+		reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);
+
+		create_custom_dropdowns();
+	}
+}
+
+function zone_selected(item){
+	$(item).parent().removeClass("is-invalid");
+	$(item).parent().attr("tooltip","");
+	
+	var _location = $(fac_dlg.el).find(".select-dropdown.locationsSelector").find(".current").text();
+	var _zone = $(fac_dlg.el).find(".select-dropdown.zonesSelector").find(".current").text();
+	
+	if(_location != undefined && _location != null && _location != "Locations..."){
+		if(_zone != undefined && _zone != null && _zone != "Zones..."){
+		
+			var ii = [];
+			var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+			if(con != null){
+				con.open();
+
+				var query   = "SELECT distinct `Region` ";
+					query  += "FROM `facilities` "; 
+					query  += "WHERE `Zone` = @Zone  "; 
+					query  += "AND `Region` IS NOT NULL ";  	
+					query  += "ORDER BY `Region` "; 
+				
+				var comm = con.createCommand(query);
+				if(comm != null){
+					comm.addParameter("@Zone", "String", _zone);
+					var reader = comm.executeReader();
+					if(reader != null){
+						while(reader.read()){
+							var row = JSON.parse(reader.getValues());	
+							if(row != undefined && row != null)ii.push(row.Region);
+						}
+						reader.close();
+						con.close();				
+					}
+					else con.close();
+				}
+				else con.close();
+			}
+			
+			if(ii != undefined && ii != null){
+				reset_dropdown($(fac_dlg.el), "regionsSelector", "Regions", ii);	
+				reset_dropdown($(fac_dlg.el), "districtsSelector", "Districts", []);
+				reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);
+			}
+			
+			create_custom_dropdowns();
+			
+			add_dropdown_scroll($(fac_dlg.el), "regionsSelector", {"overflow-y": "auto", "max-height": "200px"});
+			
+		}
+		else {
+			reset_dropdown($(fac_dlg.el), "regionsSelector", "Regions", []);		
+			reset_dropdown($(fac_dlg.el), "districtsSelector", "Districts", []);
+			reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);		
+			create_custom_dropdowns();
+		}
+	}
+	else  {
+		reset_dropdown($(fac_dlg.el), "regionsSelector", "Regions", []);		
+		reset_dropdown($(fac_dlg.el), "districtsSelector", "Districts", []);
+		reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);	
+		create_custom_dropdowns();	
+	}
+}
+
+function region_selected(item){
+	$(item).parent().removeClass("is-invalid");
+	$(item).parent().attr("tooltip","");
+	//console.log("region_selected");
+	var _location = $(fac_dlg.el).find(".select-dropdown.locationsSelector").find(".current").text();
+	var _zone = $(fac_dlg.el).find(".select-dropdown.zonesSelector").find(".current").text();
+	var _region = $(fac_dlg.el).find(".select-dropdown.regionsSelector").find(".current").text();
+	
+	if(_location != undefined && _location != null && _location != "Locations..."){
+		if(_zone != undefined && _zone != null && _zone != "Zones..."){
+			var ii = [];
+			var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+			if(con != null){
+				con.open();
+
+				var query   = "SELECT distinct `District` ";
+					query  += "FROM `facilities` "; 
+					query  += "WHERE `Region` = @Region  "; 
+					query  += "AND `Zone` = @Zone  ";
+					query  += "AND `District` IS NOT NULL ";  					
+					query  += "ORDER BY `District` "; 
+				
+				var comm = con.createCommand(query);
+				if(comm != null){
+					comm.addParameter("@Zone", "String", _zone);
+					comm.addParameter("@Region", "String", _region);
+					var reader = comm.executeReader();
+					if(reader != null){
+						while(reader.read()){
+							var row = JSON.parse(reader.getValues());	
+							if(row != undefined && row != null)ii.push(row.District);
+						}
+						reader.close();
+						con.close();				
+					}
+					else con.close();
+				}
+				else con.close();
+			}
+			
+			if(ii != undefined && ii != null){
+				reset_dropdown($(fac_dlg.el), "districtsSelector", "Districts", ii);
+				reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);	
+			}
+			
+			create_custom_dropdowns();			
+			add_dropdown_scroll($(fac_dlg.el), "districtsSelector", {"overflow-y": "auto", "max-height": "200px"});
+		}
+		else if(_region != undefined && _region != null && _region != "Regions..."){
+			var ii = [];
+			var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+			if(con != null){
+				con.open();
+
+				var query   = "SELECT distinct `District` ";
+					query  += "FROM `facilities` "; 
+					query  += "WHERE `Region` = @Region  ";
+					query  += "AND `District` IS NOT NULL "; 
+					query  += "ORDER BY `District` "; 
+				
+				var comm = con.createCommand(query);
+				if(comm != null){
+					comm.addParameter("@Region", "String", _region);
+					var reader = comm.executeReader();
+					if(reader != null){
+						while(reader.read()){
+							var row = JSON.parse(reader.getValues());	
+							if(row != undefined && row != null)ii.push(row.District);
+						}
+						reader.close();
+						con.close();				
+					}
+					else con.close();
+				}
+				else con.close();
+			}
+			
+			if(ii != undefined && ii != null){
+				reset_dropdown($(fac_dlg.el), "districtsSelector", "Districts", ii);
+				reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);		
+			}
+			
+			create_custom_dropdowns();			
+			add_dropdown_scroll($(fac_dlg.el), "districtsSelector", {"overflow-y": "auto", "max-height": "200px"});
+		}
+		else {
+			reset_dropdown($(fac_dlg.el), "districtsSelector", "Districts", []);
+			reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);	
+			create_custom_dropdowns();	
+		}
+	}
+	else {
+		reset_dropdown($(fac_dlg.el), "districtsSelector", "Districts", []);
+		reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);		
+		create_custom_dropdowns();	
+	}
+}
+
+function district_selected(item){
+	$(item).parent().removeClass("is-invalid");
+	$(item).parent().attr("tooltip","");
+	//console.log("district_selected");
+	var _location = $(fac_dlg.el).find(".select-dropdown.locationsSelector").find(".current").text();
+	var _zone = $(fac_dlg.el).find(".select-dropdown.zonesSelector").find(".current").text();
+	var _region = $(fac_dlg.el).find(".select-dropdown.regionsSelector").find(".current").text();
+	var _district = $(fac_dlg.el).find(".select-dropdown.districtsSelector").find(".current").text();
+	
+	if(_location != undefined && _location != null && _location != "Locations..."){
+		if(_zone != undefined && _zone != null && _zone != "Zones..."){
+			if(_region != undefined && _region != null && _region != "Regions..."){
+				if(_district != undefined && _district != null && _district != "Districts..."){
+					
+					var ii = [];
+					var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+					if(con != null){
+						con.open();
+
+						var query   = "SELECT distinct `Council` ";
+							query  += "FROM `facilities` "; 
+							query  += "WHERE `Region` = @Region  "; 
+							query  += "AND `District` = @District  "; 
+							query  += "AND `Location` = @Location  ";
+							query  += "AND `Zone` = @Zone  "; 	
+							query  += "AND `Council` IS NOT NULL ";				
+							query  += "ORDER BY `Council` "; 
+						
+						var comm = con.createCommand(query);
+						if(comm != null){
+							comm.addParameter("@Zone", "String", _zone);
+							comm.addParameter("@District", "String", _district);
+							comm.addParameter("@Region", "String", _region);
+							comm.addParameter("@Location", "String", _location);
+							var reader = comm.executeReader();
+							if(reader != null){
+								while(reader.read()){
+									var row = JSON.parse(reader.getValues());	
+									if(row != undefined && row != null)ii.push(row.Council);
+								}
+								reader.close();
+								con.close();				
+							}
+							else con.close();
+						}
+						else con.close();
+					}
+					
+					if(ii != undefined && ii != null){
+						reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", ii);
+					}
+					
+					create_custom_dropdowns();			
+					add_dropdown_scroll($(fac_dlg.el), "councilsSelector", {"overflow-y": "auto", "max-height": "200px"});
+					
+				}
+				else {
+					reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);	
+					create_custom_dropdowns();	
+				}
+			}
+			else {
+				reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);	
+				create_custom_dropdowns();	
+			}
+		}
+		else if(_region != undefined && _region != null && _region != "Regions..."){
+			if(_district != undefined && _district != null && _district != "Districts..."){
+				
+				var ii = [];
+				var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+				if(con != null){
+					con.open();
+
+					var query   = "SELECT distinct `Council` ";
+						query  += "FROM `facilities` "; 
+						query  += "WHERE `Region` = @Region  "; 
+						query  += "AND `District` = @District  ";
+						query  += "AND `Location` = @Location  ";
+						query  += "AND `Council` IS NOT NULL ";
+						query  += "ORDER BY `Council` "; 
+					
+					var comm = con.createCommand(query);
+					if(comm != null){
+						comm.addParameter("@District", "String", _district);
+						comm.addParameter("@Region", "String", _region);
+						comm.addParameter("@Location", "String", _location);
+						var reader = comm.executeReader();
+						if(reader != null){
+							while(reader.read()){
+								var row = JSON.parse(reader.getValues());	
+								if(row != undefined && row != null)ii.push(row.Council);
+							}
+							reader.close();
+							con.close();				
+						}
+						else con.close();
+					}
+					else con.close();
+				}
+
+				if(ii != undefined && ii != null){
+					reset_dropdown($(fac_dlg.el), "councilsSelector", "Districts", ii);
+				}
+				
+				create_custom_dropdowns();			
+				add_dropdown_scroll($(fac_dlg.el), "councilsSelector", {"overflow-y": "auto", "max-height": "200px"});
+				
+			}
+			else {
+				reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);	
+				create_custom_dropdowns();	
+			}
+		}
+		else {
+			reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);	
+			create_custom_dropdowns();	
+		}
+	}
+	else {
+		reset_dropdown($(fac_dlg.el), "councilsSelector", "Councils", []);	
+		create_custom_dropdowns();	
+	}
+}
+
+function council_selected(item){
+	$(item).parent().removeClass("is-invalid");
+	$(item).parent().attr("tooltip","");
+	
+	var _location = $(fac_dlg.el).find(".select-dropdown.locationsSelector").find(".current").text();
+	var _zone = $(fac_dlg.el).find(".select-dropdown.zonesSelector").find(".current").text();
+	var _region = $(fac_dlg.el).find(".select-dropdown.regionsSelector").find(".current").text();
+	var _district = $(fac_dlg.el).find(".select-dropdown.districtsSelector").find(".current").text();
+	var _council = $(fac_dlg.el).find(".select-dropdown.councilsSelector").find(".current").text();
+	
+	if(_location != undefined && _location != null && _location != "Locations..."){
+		if(_zone != undefined && _zone != null && _zone != "Zones..."){
+			if(_district != undefined && _district != null && _district != "Districts..."){
+				if(_council != undefined && _council != null && _council != "Councils..."){
+		
+				}
+			}
+		}
+		else if(_region != undefined && _region != null && _region != "Regions..."){
+			if(_district != undefined && _district != null && _district != "Districts..."){
+				if(_council != undefined && _council != null && _council != "Councils..."){
+		
+				}
+			}
+		}
+	}
+}
+
+function facility_type_selected(item){
+	$(item).parent().removeClass("is-invalid");
+	$(item).parent().attr("tooltip","");
+}
+
+function delete_facility(item){
+	var _parent = $(item).parents(".FacilityItem");
+	if(_parent != undefined && _parent != null){
+		var FacilityNumber = _parent.data("facilitynumber");
+		var Location = _parent.data("location").trim();
+		var FacilityName = _parent.data("facilityname");
+		
+		var content = '';
+			content += '<div class="bar-container" style="margin:0px;">';
+			content += '	<div class="bar-progress"></div>';
+			content += '</div>'; 
+			
+			content += '	<div class="FlexDisplay FlexRow"  style="width:100%; height:48px; margin-bottom:8px; padding:2px 8px;">';						
+			content += '		<div class="FlexDisplay Flex" style="min-width:150px;">';
+			content += '			<h4 class="feature-title mt-0" style="margin:auto auto; font-size: 12px; font-weight:normal; line-height:1;">Are you sure you want to delete facility with id "'+FacilityNumber+'" and location "'+Location+' called "'+FacilityName+'""</h4>';
+			content += '		</div>';
+			content += '	</div>';
+			content += '	<div class="FlexDisplay FlexRow"  style="width:100%; height:56px; margin-bottom:8px; padding:2px 8px;">';						
+			content += '		<div class="FlexDisplay Flex" style="min-width:150px;">';
+			content += '			<div class="FlexDisplay" style="margin:auto auto;">';
+			content += '				<div class="yesButton button button-primary" style="margin:0px 4px 0px 0px;">Yes</div>';
+			content += '				<div class="noButton button button-primary" style="margin:0px 0px 0px 4px;">No</div>';
+			content += '			</div>';
+			content += '		</div>';
+			content += '	</div>';
+			
+			
+			content += '</div>';
+
+
+		var fac_dlg = ShowDialog('<i class="mdi mdi-hospital-marker"></i>', "Delete facility", content,{
+			onCloseDialog : function() {
+				fac_dlg = null;
+				return false; 
+			}
+		},"400px");	
+		
+		$(fac_dlg.el).find(".yesButton").unbind( "click" );
+		$(fac_dlg.el).find(".yesButton").click(function() {
+			
+			if(FacilityNumber != undefined && FacilityNumber != null &&
+				FacilityName != undefined && FacilityName != null &&
+				Location != undefined && Location != null && Location.length > 0){
+				
+				var deleted = false;
+				var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+				if(con != null){
+					con.open();
+
+					var query    = "DELETE FROM `facilities` ";							
+						query   += "WHERE `FacilityNumber` = @FacilityNumber ";
+						query   += "AND `Location` = @Location ";	
+					
+					var comm = con.createCommand(query);
+					if(comm != null){
+						comm.addParameter("@FacilityNumber", "String", FacilityNumber);
+						comm.addParameter("@Location", "String", Location);
+						comm.executeNonQuery();
+						con.close();
+						deleted = true;
+					}
+					else con.close();
+				}
+				
+				if(deleted){
+					var hasItems = false;
+					var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+					if(con != null){
+						con.open();
+
+						var id = FacilityName[0].toString().toUpperCase();
+							if(id >= 0 && id <= 9)id = "0_9";
+							
+						var query  = "SELECT 1 ";
+							query += "FROM `facilities`  ";
+							query += "WHERE ";
+							query += "(case when (substr(`FacilityName` ,1,1) GLOB '*[^0-9]*') = 0 then '0_9' ";
+							query += "	  else upper(substr(`FacilityName` ,1,1)) ";
+							query += "end) = @ID ";
+							
+						var comm = con.createCommand(query);
+						if(comm != null){
+							comm.addParameter("@ID", "String", id);
+							var reader = comm.executeReader();
+							if(reader != null){
+								hasItems = reader.read();
+								reader.close();
+								con.close();				
+							}
+							else con.close();
+						}
+						else con.close();
+					}
+					
+					if(hasItems){
+						populateData(id);
+					}
+					else{
+						$('#Page_'+id).addClass('Disabled');
+						$("#pagingBox").find('.Pager').each(function(){
+							$(this).removeClass('Selected');
+						});
+						
+						var _id = "0_9";
+						var foundOne = false;
+						$("#pagingBox").find('.Pager').each(function(){
+							if(!$(this).hasClass('Disabled')){
+								if(!foundOne){
+									foundOne = true;
+									_id = $(this).attr('id').replace('Page_','');
+								}
+							}
+						});	
+						
+						$('#Page_'+_id).addClass('Selected');
+						populateData(_id);
+					}
+					
+					
+					if(map != undefined && map != null && _parent.hasClass("Checked")){
+						mapMarkers.clearLayers();
+						map.options.maxZoom = 2;
+						map.eachLayer(function(layer) {
+							if(layer instanceof L.TileLayer )
+								layer.options.maxZoom = 2;
+						});
+						map.setView([-50.109307, 6.434463],2);
+					}
+					
+					fac_dlg.toggle();
+					fac_dlg = null;
+
+				}
+			}
+		});
+		
+		$(fac_dlg.el).find(".noButton").unbind( "click" );
+		$(fac_dlg.el).find(".noButton").click(function() {
+			fac_dlg.toggle();
+			fac_dlg = null;		
+		});
+		
+	}
+}
+
+function edit_facility(item){
+	var _parent = $(item).parents(".FacilityItem");
+	if(_parent != undefined && _parent != null){
+	
+		var options = {};
+
+		options.ID = _parent.data("facilitynumber");
+		options.Name = _parent.data("facilityname");
+		options.Latitude = _parent.data("latitude");
+		options.Longitude = _parent.data("longitude");
+		
+		options.Location = _parent.data("location");
+		options.Zone = _parent.data("zone");
+		options.Region = _parent.data("region");
+		options.District = _parent.data("district");
+		options.Council = _parent.data("council");
+		options.Facilitytype = _parent.data("facilitytype");
+		
+		options.IsDefault = _parent.data("isdefault");
+		
+		options.Locations = [];
+		var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+		if(con != null){
+			con.open();
+
+			var query  = "SELECT distinct `Location` FROM `facilities` ORDER BY `Location`";				
+			var comm = con.createCommand(query);
+			if(comm != null){
+				var reader = comm.executeReader();
+				if(reader != null){
+					while(reader.read()){
+						var row = JSON.parse(reader.getValues());	
+						if(row != undefined && row != null)options.Locations.push(row.Location);
+					}
+					reader.close();
+					con.close();				
+				}
+				else con.close();
+			}
+			else con.close();
+		}
+
+		options.Facilitytypes = [];
+		var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+		if(con != null){
+			con.open();
+
+			var query  = "SELECT distinct REPLACE(REPLACE(`FacilityType`,'Hospital - ',''),'Clinic - ','') as `FacilityType` FROM `facilities` WHERE `FacilityType` IS NOT NULL ORDER BY `FacilityType`";				
+			var comm = con.createCommand(query);
+			if(comm != null){
+				var reader = comm.executeReader();
+				if(reader != null){
+					while(reader.read()){
+						var row = JSON.parse(reader.getValues());	
+						if(row != undefined && row != null)options.Facilitytypes.push(row.FacilityType);
+					}
+					reader.close();
+					con.close();
+				}
+				else con.close();
+			}
+			else con.close();
+		}
+		
+		options.Zones = [];
+		var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+		if(con != null){
+			con.open();
+
+			var query  = "SELECT distinct `Zone` FROM `facilities` WHERE `Zone` IS NOT NULL ORDER BY `Zone`";				
+			var comm = con.createCommand(query);
+			if(comm != null){
+				var reader = comm.executeReader();
+				if(reader != null){
+					while(reader.read()){
+						var row = JSON.parse(reader.getValues());	
+						if(row != undefined && row != null)options.Zones.push(row.Zone);
+					}
+					reader.close();
+					con.close();				
+				}
+				else con.close();
+			}
+			else con.close();
+		}		
+		
+		options.Regions = [];
+		var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+		if(con != null){
+			con.open();
+
+			var query   = "SELECT distinct `Region` ";
+				query  += "FROM `facilities` "; 
+				query  += "WHERE `Location` = @Location  ";
+				if(options.Location == "Mainland")query  += "AND `Zone` = @Zone  ";	
+				query  += "AND `Region` IS NOT NULL  ";			
+				query  += "ORDER BY `Zone`, `Region` "; 
+				
+			var comm = con.createCommand(query);
+			if(comm != null){
+				comm.addParameter("@Location", "String", options.Location);
+				if(options.Location == "Mainland")comm.addParameter("@Zone", "String", options.Zone);
+				var reader = comm.executeReader();
+				if(reader != null){
+					while(reader.read()){
+						var row = JSON.parse(reader.getValues());	
+						if(row != undefined && row != null)options.Regions.push(row.Region);
+					}
+					reader.close();
+					con.close();				
+				}
+				else con.close();
+			}
+			else con.close();
+		}	
+		
+		options.Districts = [];
+		var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+		if(con != null){
+			con.open();
+
+			var query   = "SELECT distinct `District` ";
+				query  += "FROM `facilities` "; 
+				query  += "WHERE `Location` = @Location  ";
+				if(options.Location == "Mainland")query  += "AND `Zone` = @Zone  ";
+				query  += "AND `Region` = @Region  ";
+				query  += "AND `District` IS NOT NULL  ";
+				query  += "ORDER BY `District` "; 
+				
+			var comm = con.createCommand(query);
+			if(comm != null){
+				comm.addParameter("@Location", "String", options.Location);
+				if(options.Location == "Mainland")comm.addParameter("@Zone", "String", options.Zone);
+				comm.addParameter("@Region", "String", options.Region);
+				var reader = comm.executeReader();
+				if(reader != null){
+					while(reader.read()){
+						var row = JSON.parse(reader.getValues());	
+						if(row != undefined && row != null)options.Districts.push(row.District);
+					}
+					reader.close();
+					con.close();				
+				}
+				else con.close();
+			}
+			else con.close();
+		}
+		
+		options.Councils = [];
+		var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+		if(con != null){
+			con.open();
+
+			var query   = "SELECT distinct `Council` ";
+				query  += "FROM `facilities` "; 
+				query  += "WHERE `Location` = @Location  ";
+				if(options.Location == "Mainland")query  += "AND `Zone` = @Zone  ";
+				query  += "AND `Region` = @Region  ";
+				query  += "AND `District` = @District  ";
+				query  += "AND `Council` IS NOT NULL  ";
+				query  += "ORDER BY `Council` "; 
+				
+			var comm = con.createCommand(query);
+			if(comm != null){
+				comm.addParameter("@Location", "String", options.Location);
+				if(options.Location == "Mainland")comm.addParameter("@Zone", "String", options.Zone);
+				comm.addParameter("@Region", "String", options.Region);
+				comm.addParameter("@District", "String", options.District);
+				var reader = comm.executeReader();
+				if(reader != null){
+					while(reader.read()){
+						var row = JSON.parse(reader.getValues());	
+						if(row != undefined && row != null)options.Councils.push(row.Council);
+					}
+					reader.close();
+					con.close();				
+				}
+				else con.close();
+			}
+			else con.close();
+		}
+		
+		options.Title = "Edit facility";
+		options.Mode = "Edit";
+
+		facility_popup(options);
+	}
+}
+
+function facility_popup(options){
+	if(options != undefined && options != null){
+		var content = '';
+			content += '<div class="bar-container" style="margin:0px;">';
+			content += '	<div class="bar-progress"></div>';
+			content += '</div>';
+			content += '<div class="FlexDisplay FlexColumn" style="width:100%; min-height:128px;  margin:8px 0px 8px 0px;" >';
+
+			content += '	<div class="FlexDisplay FlexRow"  style="width:100%; height:32px;margin-bottom:8px; padding:2px 8px;">';						
+			content += '		<div class="FlexDisplay Flex" style="min-width:150px;">';
+			content += '			<div tooltip="" flow="down" class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 0px; border-radius:2px; ">';	
+			content += '				<div class="icon" style="padding-top:0px;">';	
+			content += '					<i class="mdi mdi-hospital-building" />';	
+			content += '				</div>';	
+			content += '				<input type="text" placeholder="Id" value="'+options.ID+'"  class="id-input" style="padding:0px 0px 0px 8px;"/>';	
+			content += '			</div>';
+			content += '		</div>';
+			content += '		<div class="FlexDisplay Flex" style="min-width:150px;">';
+			content += '			<div tooltip="" flow="down" class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 0px; border-radius:2px; ">';	
+			content += '				<div class="icon" style="padding-top:0px;">';	
+			content += '					<i class="mdi mdi-hospital-building" />';	
+			content += '				</div>';	
+			content += '				<input type="text" placeholder="Name" value="'+options.Name+'"  class="name-input" style="padding:0px 0px 0px 8px;"/>';	
+			content += '			</div>';
+			content += '		</div>';
+			content += '	</div>';
+			
+			content += '	<div class="FlexDisplay FlexRow"  style="width:100%; height:32px; margin-bottom:8px; padding:2px 8px;">';						
+			content += '		<div class="FlexDisplay Flex FlexColumn" style="min-width:150px;">';
+			content += '			<div tooltip="" flow="down" class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 0px; border-radius:2px;">';
+			content += '				<div class="icon">';
+			content += '					<i class="mdi mdi-map-marker" />';
+			content += '				</div>';
+			content += '				<select class="locationsSelector" onchange="location_selected(this)">';
+			content += '					<option '+(options.Location == null ? 'selected=""' : '' )+'>Locations...</option>';			
+			options.Locations.forEach(function(item, index){
+				content += '					<option '+(options.Location != null && options.Location == item ? 'selected=""' : '' )+'>'+item+'</option>';
+			});
+			content += '				</select>';
+			content += '			</div>';
+			content += '		</div>';
+			content += '		<div class="FlexDisplay Flex FlexColumn" style="min-width:150px;">';
+			content += '			<div tooltip="" flow="down" class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 0px; border-radius:2px;">';
+			content += '				<div class="icon">';
+			content += '					<i class="mdi mdi-map-marker" />';
+			content += '				</div>';
+			content += '				<select class="zonesSelector" onchange="zone_selected(this)">';
+			content += '					<option '+(options.Zone == null ? 'selected=""' : '' )+'>Zones...</option>';	
+			options.Zones.forEach(function(item, index){
+				content += '					<option '+(options.Zone != null && options.Zone == item ? 'selected=""' : '' )+'>'+item+'</option>';
+			});
+			content += '				</select>';
+			content += '			</div>';
+			content += '		</div>';
+			content += '	</div>';
+				
+			content += '	<div class="FlexDisplay FlexRow"  style="width:100%; height:32px; margin-bottom:8px; padding:2px 8px;">';						
+			content += '		<div class="FlexDisplay Flex FlexColumn" style="min-width:150px;">';
+			content += '			<div tooltip="" flow="down" class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 0px; border-radius:2px;">';
+			content += '				<div class="icon">';
+			content += '					<i class="mdi mdi-map-marker" />';
+			content += '				</div>';
+			content += '				<select class="regionsSelector" onchange="region_selected(this)">';
+			content += '					<option '+(options.Region == null ? 'selected=""' : '' )+'>Regions...</option>';
+			options.Regions.forEach(function(item, index){
+				content += '					<option '+(options.Region != null && options.Region == item ? 'selected=""' : '' )+'>'+item+'</option>';
+			});
+			content += '				</select>';
+			content += '			</div>';
+			content += '		</div>';
+			content += '		<div class="FlexDisplay Flex FlexColumn" style="min-width:150px;">';
+			content += '			<div tooltip="" flow="down" class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 0px; border-radius:2px;">';
+			content += '				<div class="icon">';
+			content += '					<i class="mdi mdi-map-marker" />';
+			content += '				</div>';
+			content += '				<select class="districtsSelector" onchange="district_selected(this)">';
+			content += '					<option '+(options.District == null ? 'selected=""' : '' )+'>Districts...</option>';
+			options.Districts.forEach(function(item, index){
+				content += '					<option '+(options.District != null && options.District == item ? 'selected=""' : '' )+'>'+item+'</option>';
+			});
+			content += '				</select>';
+			content += '			</div>';
+			content += '		</div>';
+			content += '	</div>';
+			
+			content += '	<div class="FlexDisplay FlexRow"  style="width:100%; height:32px; margin-bottom:8px; padding:2px 8px;">';						
+			content += '		<div class="FlexDisplay Flex FlexColumn" style="min-width:150px;">';
+			content += '			<div tooltip="" flow="down" class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 0px; border-radius:2px;">';
+			content += '				<div class="icon">';
+			content += '					<i class="mdi mdi-map-marker" />';
+			content += '				</div>';
+			content += '				<select class="councilsSelector" onchange="council_selected(this)">';
+			content += '					<option '+(options.Council == null ? 'selected=""' : '' )+'>Councils...</option>';
+			options.Councils.forEach(function(item, index){
+				content += '					<option '+(options.Council != null && options.Council == item ? 'selected=""' : '' )+'>'+item+'</option>';
+			});
+			content += '				</select>';
+			content += '			</div>';
+			content += '		</div>';
+			content += '		<div class="FlexDisplay Flex FlexColumn" style="min-width:150px;">';
+			content += '			<div tooltip="" flow="down" class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 0px; border-radius:2px;">';
+			content += '				<div class="icon">';
+			content += '					<i class="mdi mdi-map-marker" />';
+			content += '				</div>';
+			content += '				<select class="facilityTypesSelector" onchange="facility_type_selected(this)">';
+			content += '					<option '+(options.Facilitytype == null ? 'selected=""' : '' )+'>Facility Types...</option>';
+			
+			options.Facilitytypes.forEach(function(item, index){
+				content += '					<option '+(options.Facilitytype != null && options.Facilitytype == item ? 'selected=""' : '' )+'>'+item+'</option>';
+			});
+			
+			content += '				</select>';
+			content += '			</div>';
+			content += '		</div>';
+			content += '	</div>';
+			
+			content += '	<div class="FlexDisplay FlexRow"  style="width:100%; height:32px;margin-bottom:8px; padding:2px 8px;">';						
+			content += '		<div class="FlexDisplay Flex" style="min-width:150px;">';
+			content += '			<div tooltip="" flow="down" class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 0px; border-radius:2px; ">';	
+			content += '				<div class="icon" style="padding-top:0px;">';	
+			content += '					<i class="mdi mdi-map-marker" />';	
+			content += '				</div>';	
+			content += '				<input type="text" placeholder="Latitude" value="'+options.Latitude+'" class="lat-input" style="padding:0px 0px 0px 8px;"/>';	
+			content += '			</div>';
+			content += '		</div>';
+			content += '		<div class="FlexDisplay Flex" style="min-width:150px;">';
+			content += '			<div tooltip="" flow="down" class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 0px; border-radius:2px; ">';	
+			content += '				<div class="icon" style="padding-top:0px;">';	
+			content += '					<i class="mdi mdi-map-marker" />';	
+			content += '				</div>';	
+			content += '				<input type="text" placeholder="Longitude" value="'+options.Longitude+'" class="long-input" style="padding:0px 0px 0px 8px;"/>';	
+			content += '			</div>';
+			content += '		</div>';
+			content += '	</div>';
+			
+			content += '</div>';
+			content += '<div class="FlexDisplay FlexRow" style="width:100%; height:auto; margin:4px 0px 8px 0px;" >';
+			if(options.Mode == "Edit" && options.IsDefault == 0){
+				content += '	<div class="FlexDisplay FlexRow" style="margin:8px 12px; height:auto;" >';
+				content += '		<div class="defaultButton button button-primary" style="margin:0px;">SET AS DEFAULT</div>';
+				content += '	</div>';
+			}
+			content += '	<div class="FlexDisplay Flex"></div>';
+			content += '	<div class="FlexDisplay FlexRow" style="margin:8px 12px; height:auto;" >';
+			content += '			<div class="saveFacilityButton button button-primary" style="margin:0px;">SAVE</div>';
+			content += '	</div>';
+			content += '</div>';
+			
+			
+			content += '</div>';
+
+
+		fac_dlg = ShowDialog('<i class="mdi mdi-domain-plus"></i>', options.Title, content,{
+			onCloseDialog : function() {
+				fac_dlg = null;
+				return false; 
+			}
+		},"720px");
+		
+		$(fac_dlg.el).find(".lat-input").on('change keydown paste input', function(){
+			var val = $(fac_dlg.el).find(".lat-input").val();
+			if(val.trim().length > 0){
+				if(val == "-" || val == "+"){
+					$(this).parent().removeClass("is-invalid");
+					$(this).parent().attr("tooltip","");
+				}
+				else{		
+					var item = parseFloat(val.trim());
+					if (isNaN(item)) {
+						$(this).parent().addClass("is-invalid");
+						$(this).parent().attr("tooltip","Latitude value is invalid");
+					}
+					else if(item >= -90 && item <= 90){
+						$(this).parent().removeClass("is-invalid");
+						$(this).parent().attr("tooltip","");
+					}
+					else {
+						$(this).parent().addClass("is-invalid");
+						$(this).parent().attr("tooltip","Latitude value is invalid");
+					}
+				}
+			}
+			else {
+				$(this).parent().removeClass("is-invalid");
+				$(this).parent().attr("tooltip","");
+			}
+		});
+		
+		$(fac_dlg.el).find(".long-input").on('change keydown paste input', function(){
+			var val = $(fac_dlg.el).find(".long-input").val();
+			if(val.trim().length > 0){
+				if(val == "-" || val == "+"){
+					$(this).parent().removeClass("is-invalid");
+					$(this).parent().attr("tooltip","");
+				}
+				else{		
+					var item = parseFloat(val.trim());
+					if (isNaN(item)) {
+						$(this).parent().addClass("is-invalid");
+						$(this).parent().attr("tooltip","Longitude value is invalid");
+					}
+					else if(item >= -180 && item <= 180){
+						$(this).parent().removeClass("is-invalid");
+						$(this).parent().attr("tooltip","");
+					}
+					else {
+						$(this).parent().addClass("is-invalid");
+						$(this).parent().attr("tooltip","Longitude value is invalid");
+					}
+				}
+			}
+			else {
+				$(this).parent().removeClass("is-invalid");
+				$(this).parent().attr("tooltip","");
+			}
+		});
+		
+		
+		$(fac_dlg.el).find(".saveFacilityButton").unbind( "click" );
+		$(fac_dlg.el).find(".saveFacilityButton").click(function() {
+			var _id = $(fac_dlg.el).find(".id-input").val().trim();
+			var _name = $(fac_dlg.el).find(".name-input").val().trim();
+			var _latitude = $(fac_dlg.el).find(".lat-input").val().trim();
+			var _longitude = $(fac_dlg.el).find(".long-input").val().trim();
+			
+			var _location 		=  $(fac_dlg.el).find(".select-dropdown.locationsSelector .current").text();
+			var _zone 			=  $(fac_dlg.el).find(".select-dropdown.zonesSelector .current").text();
+			var _region 		=  $(fac_dlg.el).find(".select-dropdown.regionsSelector .current").text();
+			var _district 		=  $(fac_dlg.el).find(".select-dropdown.districtsSelector .current").text();
+			var _council 		=  $(fac_dlg.el).find(".select-dropdown.councilsSelector .current").text();
+			var _facilityTypes 	=  $(fac_dlg.el).find(".select-dropdown.facilityTypesSelector .current").text();
+			
+			if(_id.trim().length > 0 &&
+				_name.trim().length > 0 &&
+				_location != "Locations..."  && 
+				_region != "Regions..."  && 
+				_district != "Districts..."  &&
+				_council != "Councils..."  &&
+				_facilityTypes != "Facility Types..." &&
+				(_location == "Mainland" ? _zone != "Zones..." : true )){
+				
+				var exists = false;
+				var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+				if(con != null){
+					con.open();
+
+					var query   = "SELECT `FacilityNumber` ";
+						query  += "FROM `facilities` "; 
+						query  += "WHERE `FacilityNumber` = @FacilityNumber  ";
+						query  += "AND `Location` = @Location  ";
+					
+					var comm = con.createCommand(query);
+					if(comm != null){
+						comm.addParameter("@FacilityNumber", "String", _id.trim());
+						comm.addParameter("@Location", "String", _location);
+						var reader = comm.executeReader();
+						if(reader != null){
+							exists = reader.read();
+							reader.close();
+							con.close();				
+						}
+						else con.close();
+					}
+					else con.close();
+				}
+			
+				if(options.Mode == "New"){
+					if(!exists){
+						_name = _name.charAt(0).toUpperCase() + _name.slice(1);
+						
+						var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+						if(con != null){
+							con.open();
+
+							var query    = "INSERT INTO `facilities` ( ";
+								query   += "	`FacilityNumber`, ";
+								query   += "	`FacilityName`, ";
+								//query   += "	`CommonName`, ";
+								if(_location == "Mainland")query   += "	`Zone`, ";
+								query   += "	`Region`, ";
+								query   += "	`District`, ";
+								if(_location == "Mainland")query   += "	`Council`, ";
+								//query   += "	`Ward`, ";
+								//query   += "	`VillageStreet`, ";
+								query   += "	`FacilityType`, ";
+								query   += "	`OperatingStatus`, ";
+								if(_latitude.length > 0 && !isNaN(_latitude))query   += "	`Latitude`, ";
+								if(_longitude.length > 0 && !isNaN(_longitude))query   += "	`Longitude`, ";
+								query   += "	`Location` ";							
+								query   += ") ";
+								query   += "VALUES ( ";
+								query   += "	@FacilityNumber, ";
+								query   += "	@FacilityName, ";
+								//query   += "	@CommonName, ";
+								if(_location == "Mainland")query   += "	@Zone, ";
+								query   += "	@Region, ";
+								query   += "	@District, ";
+								if(_location == "Mainland")query   += "	@Council, ";
+								//query   += "	@Ward, ";
+								//query   += "	@VillageStreet, ";
+								query   += "	@FacilityType, ";
+								query   += "	@OperatingStatus, ";
+								if(_latitude.length > 0 && !isNaN(_latitude))query   += "	@Latitude, ";
+								if(_longitude.length > 0 && !isNaN(_longitude))query   += "	@Longitude, ";
+								query   += "	@Location ";	
+								query   += ")";
+							
+							var comm = con.createCommand(query);
+							if(comm != null){
+								comm.addParameter("@FacilityNumber", "String", _id);
+								comm.addParameter("@FacilityName", "String", _name);
+								//comm.addParameter("@CommonName", "String", _id.trim());
+								if(_location == "Mainland")comm.addParameter("@Zone", "String", _zone);
+								comm.addParameter("@Region", "String", _region);
+								comm.addParameter("@District", "String", _district);
+								if(_location == "Mainland")comm.addParameter("@Council", "String", _council);
+								//comm.addParameter("@Ward", "String", _id.trim());
+								//comm.addParameter("@VillageStreet", "String", _id.trim());
+								comm.addParameter("@FacilityType", "String", _facilityTypes);
+								comm.addParameter("@OperatingStatus", "String", "Operating");
+								if(_latitude.length > 0 && !isNaN(_latitude))comm.addParameter("@Latitude", "Double", _latitude);
+								if(_longitude.length > 0 && !isNaN(_longitude))comm.addParameter("@Longitude", "Double", _longitude);
+								comm.addParameter("@Location", "String", _location);
+								comm.executeNonQuery();
+								con.close();
+								
+								var id = _name[0].toString().toUpperCase();
+								if(id >= 0 && id <= 9)id = "0_9";
+						
+								$('#Page_'+id).removeClass('Disabled');	
+								$("#pagingBox").find('.Pager').each(function(){
+									$(this).removeClass('Selected');
+								});			
+								$('#Page_'+id).addClass('Selected');
+								createPagerClickEvent(id, "#pagingBox", populateData);
+								
+								
+								if(map != undefined && map != null && _latitude.toString() != "" && _longitude != ""){
+									var latlong = _longitude+","+_latitude;				
+									var reCenter = getLatLong(latlong);	
+
+									map.options.maxZoom = 18;
+									map.eachLayer(function(layer) {
+										if(layer instanceof L.TileLayer )
+											layer.options.maxZoom = 18;
+									});
+
+									map.flyTo([reCenter[0]-0.002,reCenter[1]],17);
+									
+									mapMarkers.clearLayers();
+									var marker = L.marker(reCenter);
+									marker.addTo(mapMarkers);
+								}
+								
+								populateData(id, { FacilityNumber:_id, Location:_location });
+								
+								fac_dlg.toggle();
+								fac_dlg = null;
+							}
+							else con.close();
+						}
+					}
+				}
+				else{
+					if(exists){
+						_name = _name.charAt(0).toUpperCase() + _name.slice(1);
+						
+						var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+						if(con != null){
+							con.open();
+
+							var query    = "UPDATE `facilities` SET ";								
+								query   += "	`FacilityName` = @FacilityName, ";
+								//query   += "	`CommonName` = @CommonName, ";
+								if(_location == "Mainland")query   += "	`Zone` = @Zone, ";
+								query   += "	`Region` = @Region, ";
+								query   += "	`District` = @District, ";
+								if(_location == "Mainland")query   += "	`Council` = @Council, ";
+								//query   += "	`Ward` = @Ward, ";
+								//query   += "	`VillageStreet` = @VillageStreet, ";
+								query   += "	`FacilityType` = @FacilityType, ";								
+								if(_latitude.length > 0 && !isNaN(_latitude))query   += "	`Latitude` = @Latitude, ";
+								if(_longitude.length > 0 && !isNaN(_longitude))query   += "	`Longitude` = @Longitude, ";
+								query   += "	`OperatingStatus` = @OperatingStatus ";								
+								query   += "WHERE `FacilityNumber` = @FacilityNumber ";
+								query   += "AND `Location` = @Location ";	
+							
+							var comm = con.createCommand(query);
+							if(comm != null){
+								comm.addParameter("@FacilityNumber", "String", _id);
+								comm.addParameter("@FacilityName", "String", _name);
+								//comm.addParameter("@CommonName", "String", _id.trim());
+								if(_location == "Mainland")comm.addParameter("@Zone", "String", _zone);
+								comm.addParameter("@Region", "String", _region);
+								comm.addParameter("@District", "String", _district);
+								if(_location == "Mainland")comm.addParameter("@Council", "String", _council);
+								//comm.addParameter("@Ward", "String", _id.trim());
+								//comm.addParameter("@VillageStreet", "String", _id.trim());
+								comm.addParameter("@FacilityType", "String", _facilityTypes);
+								comm.addParameter("@OperatingStatus", "String", "Operating");
+								if(_latitude.length > 0 && !isNaN(_latitude))comm.addParameter("@Latitude", "Double", _latitude);
+								if(_longitude.length > 0 && !isNaN(_longitude))comm.addParameter("@Longitude", "Double", _longitude);
+								comm.addParameter("@Location", "String", _location);
+								comm.executeNonQuery();
+								con.close();
+								
+								var id = _name[0].toString().toUpperCase();
+								if(id >= 0 && id <= 9)id = "0_9";
+						
+								$('#Page_'+id).removeClass('Disabled');	
+								$("#pagingBox").find('.Pager').each(function(){
+									$(this).removeClass('Selected');
+								});			
+								$('#Page_'+id).addClass('Selected');
+								createPagerClickEvent(id, "#pagingBox", populateData);
+								
+								
+								if(map != undefined && map != null && _latitude.toString() != "" && _longitude != ""){
+									var latlong = _longitude+","+_latitude;				
+									var reCenter = getLatLong(latlong);	
+
+									map.options.maxZoom = 18;
+									map.eachLayer(function(layer) {
+										if(layer instanceof L.TileLayer )
+											layer.options.maxZoom = 18;
+									});
+
+									map.flyTo([reCenter[0]-0.002,reCenter[1]],17);
+									
+									mapMarkers.clearLayers();
+									var marker = L.marker(reCenter);
+									marker.addTo(mapMarkers);
+								}
+								
+								populateData(id, { FacilityNumber:_id, Location:_location });
+								
+								fac_dlg.toggle();
+								fac_dlg = null;
+							}
+							else con.close();
+						}
+					}
+				}			
+			}
+			else{
+				if(_id.trim().length == 0){
+					var item = $(fac_dlg.el).find(".id-input");
+					if(item != undefined && item != null){
+						item.parent().addClass("is-invalid");
+						item.parent().attr("tooltip","Facility id is required");
+						item.focus(function(){
+							$(this).parent().removeClass("is-invalid");
+							$(this).parent().attr("tooltip","");
+						});
+					}
+				}
+				
+				if(_name.trim().length == 0){
+					var item = $(fac_dlg.el).find(".name-input");
+					if(item != undefined && item != null){
+						item.parent().addClass("is-invalid");
+						item.parent().attr("tooltip","Facility name is required");
+						item.focus(function(){
+							$(this).parent().removeClass("is-invalid");
+							$(this).parent().attr("tooltip","");
+						});
+					}
+				}
+				
+				
+				if(_location == "Locations..."){
+					var item =  $(fac_dlg.el).find(".select-dropdown.locationsSelector");
+					if(item != undefined && item != null){
+						item.parent().addClass("is-invalid");
+						item.parent().attr("tooltip","Location is required");
+					}
+				}
+				
+				if(!hasZone){
+					var item =  $(fac_dlg.el).find(".select-dropdown.zonesSelector");
+					if(item != undefined && item != null){
+						item.parent().addClass("is-invalid");
+						item.parent().attr("tooltip","Zone is required");
+					}
+				}			
+				
+				if(_region == "Regions..."){
+					var item =  $(fac_dlg.el).find(".select-dropdown.regionsSelector");
+					if(item != undefined && item != null){
+						item.parent().addClass("is-invalid");
+						item.parent().attr("tooltip","Region is required");
+					}
+				}
+				
+				if(_district == "Districts..."){
+					var item =  $(fac_dlg.el).find(".select-dropdown.districtsSelector");
+					if(item != undefined && item != null){
+						item.parent().addClass("is-invalid");
+						item.parent().attr("tooltip","District is required");
+					}
+				}
+				
+				if(_council == "Councils..."){
+					var item =  $(fac_dlg.el).find(".select-dropdown.councilsSelector");
+					if(item != undefined && item != null){
+						item.parent().addClass("is-invalid");
+						item.parent().attr("tooltip","Council is required");
+					}
+				}
+				
+				if(_facilityTypes == "Facility Types..."){
+					var item =  $(fac_dlg.el).find(".select-dropdown.facilityTypesSelector");
+					if(item != undefined && item != null){
+						item.parent().addClass("is-invalid");
+						item.parent().attr("tooltip","Facility type is required");
+					}
+				}			
+			}
+			
+		});
+		
+		$(fac_dlg.el).find(".defaultButton").unbind( "click" );
+		$(fac_dlg.el).find(".defaultButton").click(function() {
+			var _id = $(fac_dlg.el).find(".id-input").val().trim();			
+			var _location 		=  $(fac_dlg.el).find(".select-dropdown.locationsSelector .current").text();
+			var _zone 			=  $(fac_dlg.el).find(".select-dropdown.zonesSelector .current").text();
+			
+			if(_id.trim().length > 0 &&
+				_location != "Locations..."  && 
+				(_location == "Mainland" ? _zone != "Zones..." : true )){
+				
+				var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+				if(con != null){
+					con.open();
+
+					var exists = false;
+					var query   = "SELECT `FacilityNumber` ";
+						query  += "FROM `facilities` "; 
+						query  += "WHERE `FacilityNumber` = @FacilityNumber  ";
+						query  += "AND `Location` = @Location  ";
+					
+					var comm = con.createCommand(query);
+					if(comm != null){
+						comm.addParameter("@FacilityNumber", "String", _id.trim());
+						comm.addParameter("@Location", "String", _location);
+						var reader = comm.executeReader();
+						if(reader != null){
+							exists = reader.read();
+							reader.close();			
+						}
+					}
+					
+					if(exists){
+						var query    = "UPDATE `facilities` SET `IsDefault` = 0 ";					
+						var comm = con.createCommand(query);
+						if(comm != null){
+							comm.executeNonQuery();
+						}
+						
+						var query    = "UPDATE `facilities` SET `IsDefault` = 1 ";	
+							query   += "WHERE `FacilityNumber` = @FacilityNumber ";
+							query   += "AND `Location` = @Location ";
+							
+						var comm = con.createCommand(query);
+						if(comm != null){
+							comm.addParameter("@FacilityNumber", "String", _id);
+							comm.addParameter("@Location", "String", _location);
+							comm.executeNonQuery();
+						}
+						
+						con.close();
+					}
+					else con.close();
+				}
+			}
+			
+		});
+		
+		
+		create_custom_dropdowns();
+		
+		var _regions = $(fac_dlg.el).find(".select-dropdown.regionsSelector").find(".list");
+		if(_regions != undefined && _regions != null){
+			_regions.addClass("scroll scroll2");
+			_regions.css({"overflow-y": "auto", "max-height": "200px"});
+		}
+		
+		var _districts = $(fac_dlg.el).find(".select-dropdown.districtsSelector").find(".list");
+		if(_districts != undefined && _districts != null){
+			_districts.addClass("scroll scroll2");
+			_districts.css({"overflow-y": "auto", "max-height": "200px"});
+		}
+		
+		var _councils = $(fac_dlg.el).find(".select-dropdown.councilsSelector").find(".list");
+		if(_councils != undefined && _councils != null){
+			_councils.addClass("scroll scroll2");
+			_councils.css({"overflow-y": "auto", "max-height": "200px"});
+		}
+		
+		var _facilityTypes = $(fac_dlg.el).find(".select-dropdown.facilityTypesSelector").find(".list");
+		if(_facilityTypes != undefined && _facilityTypes != null){
+			_facilityTypes.addClass("scroll scroll2");
+			_facilityTypes.css({"overflow-y": "auto", "max-height": "200px"});
+		}
+	}	
+}
+
+$("#addFacility").unbind( "click" );
+$('#addFacility').click(function(){ 
+	var options = {};
+	
+	options.Locations = null;
+	var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+	if(con != null){
+		con.open();
+
+		var query  = "SELECT distinct `Location` FROM `facilities` ORDER BY `Location`";				
+		var comm = con.createCommand(query);
+		if(comm != null){
+			var reader = comm.executeReader();
+			if(reader != null){
+				options.Locations = [];
+				while(reader.read()){
+					var row = JSON.parse(reader.getValues());	
+					if(row != undefined && row != null)options.Locations.push(row.Location);
+				}
+				reader.close();
+				con.close();				
+			}
+			else con.close();
+		}
+		else con.close();
+	}
+	
+	options.Facilitytypes = null;
+	var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+	if(con != null){
+		con.open();
+
+		var query  = "SELECT distinct REPLACE(REPLACE(`FacilityType`,'Hospital - ',''),'Clinic - ','') as `FacilityType` FROM `facilities` WHERE `FacilityType` IS NOT NULL ORDER BY `FacilityType`";				
+		var comm = con.createCommand(query);
+		if(comm != null){
+			var reader = comm.executeReader();
+			if(reader != null){
+				options.Facilitytypes = [];
+				while(reader.read()){
+					var row = JSON.parse(reader.getValues());	
+					if(row != undefined && row != null)options.Facilitytypes.push(row.FacilityType);
+				}
+				reader.close();
+				con.close();
+			}
+			else con.close();
+		}
+		else con.close();
+	}	
+	
+	options.Zone = null;
+	options.Zones = []; 
+	
+	options.Region = null;
+	options.Regions = []; 
+	
+	options.District = null;
+	options.Districts = []; 
+	
+	options.Council = null;
+	options.Councils = []; 
+	
+	options.ID = "";
+	options.Name = "";
+	options.Latitude = "";
+	options.Longitude = "";
+	
+	options.Title = "Add facility";
+	options.Mode = "New";
+
+	facility_popup(options);
+});
+	
+
+//map = Render({Latitude:"-6.812102",Longitude:"39.297465"});
+map = Render({Latitude:"",Longitude:""});
+
+var pagerList = preparePager("#pagingBox", "FacilityName", "facilities", populateData);
+if(pagerList.length > 0){
+	var fisrtID = pagerList.shift();
+	$('#Page_'+fisrtID).addClass('Selected');
+	populateData(fisrtID);
+}
+
+closeLoadingPage();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</script>

@@ -1,0 +1,330 @@
+<div class="FlexDisplay FlexColumn container"  style="margin:0px; padding:0px; height:100%;">
+	<div class="FlexDisplay" style="background:#535FD7; height:48px; box-shadow:0 1px 2px rgba(0, 0, 0, 0.3);" >
+		<div id="backBtn"  class="nav-button" >
+			<i class="mdi mdi-apps"></i>
+		</div>
+		<div class="FlexDisplay">
+			<span class="BEQAS-Title" style="white-space:nowrap; overflow:hidden; text-overflow: ellipsis; font-weight:normal; font-size:12px; color:#ffffff; margin:auto 8px;">Basic External Quality Assessment System</span>
+		</div>
+		<div class="FlexDisplay FlexGrow" style="height:100%;"></div>
+		<div class="save dropdown" tooltip="save" flow="down">
+			<div class="nav-button transparent dropdown">
+				<i class="mdi mdi-check-circle"></i>
+			</div>
+			<div class="submenu">
+				<ul class="root"/>
+			</div>
+		</div>
+	</div>
+	<div class="FlexDisplay Flex ContentPage  inner-section FadeIn"  style="width:100%; height:1px;">
+		
+		<div class="FlexDisplay FlexColumn FlexGrow FlexBoxSizing-BorderBox" style="height:100%; overflow: hidden; position:relative;">
+			<div class="FlexDisplay" style="margin:16px 16px 0px 16px;">
+				<div class="page-container Flex FlexColumn inner-container-with-overflow Round Shadow" style="position:relative; height:100%;  width:100%;">
+					
+					<div class="FlexDisplay FlexRow Divider-Bottom" style="height:32px; " >
+						<div class="FlexDisplay Flex">
+							<h4 class="feature-title mt-0" style="margin:8px 0px 0px 12px; font-size: 12px; font-weight:normal; line-height:16px;">LANGUAGES</h4>
+						</div>
+					</div>
+					<div class="FlexDisplay FlexRow">
+						<div class="FlexDisplay FlexRow"  style="width:100%; height:32px; margin:8px 4px 8px 8px;">
+							<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+								<div class="icon">
+									<i class="mdi mdi-translate" />
+								</div>
+								<select onchange="language_category_selected(this)" class="language">
+									<option value="" selected="">Language...</option>
+									<option value="en">English</option>
+									<option value="fr">Francais</option>
+								</select>
+							</div>
+						</div>
+						<div class="FlexDisplay FlexRow"  style="width:100%; height:32px; margin:8px 8px 8px 4px;">
+							<div class="FlexDisplay Flex FlexRow form-control" style="margin:0px 4px 0px 4px;">
+								<div class="icon">
+									<i class="mdi mdi-format-list-bulleted" />
+								</div>
+								<select onchange="language_category_selected(this)" class="category">
+									<option value="" selected="">Category...</option>
+									<option value="general">General Terms</option>
+									<option value="header">Page Header</option>
+									<option value="footer">Page Footer</option>
+									<option value="login">Login Page</option>
+									<option value="home">Home Page</option>
+									<option value="regn">Main Registration Page</option>
+									<option value="find_patient">Patient Lookup Page</option>
+									<option value="new_patient">Patient Registration Page</option>
+									<option value="new_specimen">Specimen Registration Page</option>
+									<option value="specimen_added">Specimen Confirmation Page</option>
+									<option value="results_entry">Results Entry Page</option>
+									<option value="search">Search Page</option>
+									<option value="patient_profile">Patient Profile Page</option>
+									<option value="specimen_info">Specimen Info Page</option>
+									<option value="lab_configs">Lab Configurations List</option>
+									<option value="lab_config_home">Lab Configuration Page</option>
+									<option value="lab_admins">Lab Managers Page</option>
+									<option value="catalog">Test Catalog Page</option>
+									<option value="reports">Main Reports Page</option>
+									<option value="edit_profile">Edit Profile Page</option>
+									<option value="help">Main Help Page</option>
+									<option value="stocks">Stock Related Terms</option>
+									<option value="lang_modify">Language Modification Page</option>
+									<option value="beqas_help_page">Help Page</option>
+									<option value="search_condition">Search Conditions</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					 
+				</div>
+			</div>
+			
+			<div class="FlexDisplay FlexRow Divider-Bottom inner-container-parent Round-Top" style="min-height:32px; max-height:32px; margin:16px 16px 0px 16px;" >
+				<div class="FlexDisplay Flex">
+					<h4 class="feature-title mt-0" style="margin:8px 0px 0px 12px; font-size: 12px; font-weight:normal; line-height:16px;">TRANSALATIONS</h4>
+				</div>
+			</div>				
+			<div class="FlexDisplay FlexGrow FlexColumn FlexBoxSizing-BorderBox scroll scroll2 Round-Bottom Shadow inner-container-parent" style="height:100%; margin:0px 16px 16px 16px; ">
+				<div class="Flex FlexColumn " style="position:relative; height:calc(100%); width:100%;">
+					<div class="Flex FlexColumn page-container CategoriesList" style="position:relative; padding:8px 0px 0px 0px; height:calc(100% - 0px);  width:100%;">
+				
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+var saveList = [];
+
+
+$("#backBtn").unbind( "click" );
+$('#backBtn').click(function(){
+	var page = System.IO.Path.Combine("web","eqa","views",backNavigation);
+	loadSubPage(System.IO.Path.Combine(System.Environment.get_CurrentDirectory(),page), true);
+});
+
+function language_category_selected(item){
+	$(".CategoriesList").html('');
+	
+	var _language 	=  $(".select-dropdown.language .current").text();
+	var _category 	=  $(".select-dropdown.category .current").text();
+	
+	if(_language != "Language..." && _category != "Category..."){
+	
+		var _language_value = $(".select-dropdown.language").find(".list .option.selected").data("value");
+		var _category_value = $(".select-dropdown.category").find(".list .option.selected").data("value");
+			
+		if(_language_value != undefined && _language_value != null &&
+		   _category_value != undefined && _category_value != null){
+		   
+			var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+			if(con != null){
+				con.open();
+
+				var query   = "SELECT ";
+					query  += "	`ID` "; 
+					query  += "	,`Code` "; 
+					query  += "	,`Name` "; 
+					query  += "	,`Category` "; 
+					query  += "	,`Value` "; 
+					query  += "FROM `languages` "; 
+					query  += "WHERE LOWER(`Code`) = LOWER(@Code)  ";
+					query  += "AND LOWER(`Name`) = LOWER(@Name)  ";
+				
+				var comm = con.createCommand(query);
+				if(comm != null){
+					comm.addParameter("@Code", "String", _language_value);
+					comm.addParameter("@Name", "String", _category_value);
+					var reader = comm.executeReader();
+					if(reader != null){
+						while(reader.read()){
+							var row = JSON.parse(reader.getValues());	
+							if(row != undefined && row != null){
+								var val = row.Value;
+								if(saveList[row.ID] != undefined && saveList[row.ID] != null){
+									if(saveList[row.ID][row.Code] != undefined && saveList[row.ID][row.Code] != null){
+										if(saveList[row.ID][row.Code][row.Name] != undefined && saveList[row.ID][row.Code][row.Name] != null){
+											if(saveList[row.ID][row.Code][row.Name][row.Category] != undefined && saveList[row.ID][row.Code][row.Name][row.Category] != null){
+												val = saveList[row.ID][row.Code][row.Name][row.Category];
+											}
+										}
+									}
+								}
+								
+								var category = '<div data-code="'+row.Code+'" data-name="'+row.Name+'" data-category="'+row.Category+'" data-id="'+row.ID+'" class="FlexDisplay Flex LanguageItem" style="min-height: 32px; max-height: 32px; margin:0px 12px 8px 12px;"> ';
+									category += '	<div class="FlexDisplay Flex FlexRow form-control"> ';
+									category += '		<div class="icon" tooltip="'+row.Category+'" flow="right"> ';
+									category += '			<i class="mdi mdi-information" /> ';
+									category += '		</div> ';									
+									category += '		<input type="text" placeholder="'+val+'" value="'+val+'"/> ';
+									category += '	</div> ';
+									category += '</div> ';
+								
+								$(".CategoriesList").append(category);
+								
+								$(".CategoriesList").find("[data-id='" + row.ID + "']").on('change keydown paste input', function(){
+									var _id			= $(this).data("id");
+									var _code		= $(this).data("code");
+									var _name		= $(this).data("name");
+									var _category	= $(this).data("category");
+									
+									if(saveList[_id] == undefined)saveList[_id] = [];
+									if(saveList[_id][_code] == undefined)saveList[_id][_code] = [];
+									if(saveList[_id][_code][_name] == undefined)saveList[_id][_code][_name] = [];
+									saveList[_id][_code][_name][_category] = $(this).find("input").val().trim();
+								});
+							}
+						}
+						reader.close();
+						con.close();				
+					}
+					else con.close();
+				}
+				else con.close();
+			}
+		}
+	}
+	else saveList = [];
+}
+
+$(".save").unbind( "click" );
+$(".save").click(function(){	
+	$(".save .submenu").hide();
+	$(".save").attr('id', '');
+		
+	$(".CategoriesList").find(".LanguageItem").each(function (index, value) {
+		var val = $(this).find("input").val().trim();
+		if(val != undefined && val != null){
+			if(val.length > 0){
+				$(this).find(".form-control").removeClass("is-invalid");
+			}
+			else $(this).find(".form-control").addClass("is-invalid");
+		}
+		else $(this).find(".form-control").addClass("is-invalid");
+	});
+	
+	if($(".CategoriesList").find(".LanguageItem .form-control.is-invalid").children().length == 0){
+		var _language 	=  $(".select-dropdown.language .current").text();
+		if(_language != "Language..."){
+		
+			if(saveList.length > 0){
+				var items = 0;
+				var con = new SqlLiteConnection(System.IO.Path.Combine(getRootPath(),"databases","beqas_dict.db"),"","");
+				if(con != null){
+					con.open();
+					
+					Object.keys(saveList).forEach(function(id){
+						if(saveList[id] != undefined){
+							Object.keys(saveList[id]).forEach(function(code){
+								if(saveList[id][code] != undefined){
+									Object.keys(saveList[id][code]).forEach(function(name){
+										if(saveList[id][code][name] != undefined){
+											Object.keys(saveList[id][code][name]).forEach(function(category){
+												var value = saveList[id][code][name][category];
+												if(value != undefined){
+												
+													var query    = "UPDATE `languages` SET `Value` = @Value ";
+														query   += "WHERE `ID` = @ID ";
+														query   += "AND `Code` = @Code ";
+														query   += "AND `Name` = @Name ";
+														query   += "AND `Category` = @Category ";
+													
+													var comm = con.createCommand(query);
+													if(comm != null){
+														comm.addParameter("@ID", "Int32", id);
+														comm.addParameter("@Code", "String", code);
+														comm.addParameter("@Name", "String", name);
+														comm.addParameter("@Category", "String", category);
+														comm.addParameter("@Value", "String", value);
+														comm.executeNonQuery();
+														
+														items++;
+													}
+												}
+											});
+										}
+									});
+								}
+							});
+						}
+					});
+					
+					con.close();
+				}
+				
+				var content = '';
+					content += '<div class="bar-container" style="margin:0px;">';
+					content += '	<div class="bar-progress"></div>';
+					content += '</div>'; 
+					
+					content += '	<div class="FlexDisplay FlexRow"  style="width:100%; height:48px; margin-bottom:8px; padding:2px 8px;">';						
+					content += '		<div class="FlexDisplay Flex" style="min-width:150px;">';
+					content += '			<h4 class="feature-title mt-0" style="margin:auto auto; font-size: 12px; font-weight:normal;">'+items+' item'+(items == 1 ? '' : 's')+' updated</h4>';
+					content += '		</div>';
+					content += '	</div>';
+					content += '	<div class="FlexDisplay FlexRow"  style="width:100%; height:56px; margin-bottom:8px; padding:2px 8px;">';						
+					content += '		<div class="FlexDisplay Flex" style="min-width:150px;">';
+					content += '			<div class="FlexDisplay" style="margin:auto auto;">';
+					content += '				<div class="okButton button button-primary" style="margin:0px 4px 0px 0px;">Ok</div>';
+					content += '			</div>';
+					content += '		</div>';
+					content += '	</div>';
+					
+					content += '</div>';
+
+				var lang_dlg = ShowDialog('<i class="mdi mdi-translate"></i>', "Updated language", content,{
+					onCloseDialog : function() {
+						lang_dlg = null;
+						return false; 
+					}
+				},"400px");	
+				
+				$(lang_dlg.el).find(".okButton").unbind( "click" );
+				$(lang_dlg.el).find(".okButton").click(function() {
+					lang_dlg.toggle();
+					lang_dlg = null;	
+				});
+			}
+		}
+	}	
+});
+
+$(".save").mouseup(function(){
+	return false;
+});
+$(".submenu").mouseup(function(){
+	return false;
+});
+
+$('.save .submenu .root .nav-button').each(function (index, value) {
+	$(this).click(function(){
+		
+	});
+});
+
+
+
+function hideNavigationDropMenu(){
+	$(".save .submenu").hide();
+	$(".save").attr('id', '');
+}
+
+create_custom_dropdowns();
+		
+var _languages = $(".select-dropdown.language").find(".list");
+if(_languages != undefined && _languages != null){
+	_languages.addClass("scroll scroll2");
+	_languages.css({"overflow-y": "auto", "max-height": "200px"});
+}
+
+var _categories = $(".select-dropdown.category").find(".list");
+if(_categories != undefined && _categories != null){
+	_categories.addClass("scroll scroll2");
+	_categories.css({"overflow-y": "auto", "max-height": "200px"});
+}
+
+hideNavigationDropMenu();
+closeLoadingPage();
+</script>
