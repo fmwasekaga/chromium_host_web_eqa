@@ -444,20 +444,6 @@ function clear_options(){
 	}
 }
 
-function add_dropdown_options(item, options, isFilled=false, isScrollable=false){
-	var _selector = $(item);
-	var _selector_list = _selector.find(".list");
-	
-	if(_selector != undefined && _selector != null && isFilled){
-		_selector.addClass("fill");
-	}
-	
-	if(_selector_list != undefined && _selector_list != null){
-		if(!isEmpty(options))_selector_list.css(options);
-		if(isScrollable)_selector_list.addClass("scroll scroll2");
-	}
-}
-
 create_custom_dropdowns();
 
 add_dropdown_options(".select-dropdown.cluster", {"overflow-y": "auto", "max-height": "200px"}, false, true);

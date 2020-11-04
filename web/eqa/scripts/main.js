@@ -313,6 +313,22 @@ function isNumberKey(evt){
     return true;
 }
 
+
+function add_dropdown_options(item, options, isFilled=false, isScrollable=false){
+	var _selector = $(item);
+	var _selector_list = _selector.find(".list");
+	
+	if(_selector != undefined && _selector != null && isFilled){
+		_selector.addClass("fill");
+	}
+	
+	if(_selector_list != undefined && _selector_list != null){
+		if(!isEmpty(options))_selector_list.css(options);
+		if(isScrollable)_selector_list.addClass("scroll scroll2");
+	}
+}
+
+
 function SelectItemByValue(item,value,strict=true){
 	if((strict == true && value != "") || strict == false){
 		item.find('.selected').removeClass('selected');
